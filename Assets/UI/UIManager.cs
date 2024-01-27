@@ -6,7 +6,13 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance { get; private set; }
 
-    [SerializeField] float fadeSpeed = 0.5f;
+    [SerializeField] float fadeSpeed = 1f;
+
+    //General Idea
+    //Should be a UI on screen at all times
+    //Whether its the newspaper screen, the main UI, pause, or whatever
+    //Use StartCoroutine(Transtion(from, to)) to swap between them
+
 
     [Header("Newspaper Screen")]
     [SerializeField] CanvasGroup newspaperUI;
@@ -16,7 +22,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] CanvasGroup mainUI;
 
 
-    
+    [Header("Pause UI")]
+    [SerializeField] CanvasGroup pauseUI;
 
 
 
@@ -33,21 +40,19 @@ public class UIManager : MonoBehaviour
     }
 
 
-    
-
-
     // Start is called before the first frame update
     void Start()
     {
-        newspaperUI.gameObject.SetActive(true);
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
+            newspaperUI.gameObject.SetActive(true);
             newspaperAnim.Play("NewspaperSpin", -1, 0);
             StartCoroutine(Transition(mainUI, newspaperUI));
         }
@@ -55,7 +60,7 @@ public class UIManager : MonoBehaviour
 
 
 
-    public IEnumerator Transition(CanvasGroup decrease, CanvasGroup increase)
+    private IEnumerator Transition(CanvasGroup decrease, CanvasGroup increase)
     {
 
         increase.gameObject.SetActive(true);
@@ -72,6 +77,12 @@ public class UIManager : MonoBehaviour
         decrease.gameObject.SetActive(false);
     }
 
+
+
+    public void SwitchtoMainUI()
+    {
+        StartCoroutine(Transition(newspaperUI, mainUI));
+    }
     
 
 }
