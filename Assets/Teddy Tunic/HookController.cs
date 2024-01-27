@@ -9,9 +9,22 @@ public class HookController : MonoBehaviour
 	[SerializeField] float Velocity;
 	[SerializeField] float MaxDistance;
 
+	//Code to reel in fish
+	[SerializeField] float reelSpeed = 0.1f;
+	Vector3 originalPos;
+	Vector3 posDifference;
+	bool reeling = false;
+
 	Vector3 _moveDirection;
 
-	private void Update()
+    private void Start()
+    {
+        originalPos = transform.position;
+    }
+
+
+
+    private void Update()
 	{
 		_moveDirection = Vector2.zero;
 
@@ -33,6 +46,21 @@ public class HookController : MonoBehaviour
 		}
 
 		_moveDirection.Normalize();
+
+		//Reeling
+		if (Input.GetKeyDown(KeyCode.Space))
+        {
+			reeling = true;
+        }
+
+
+		if(reeling)
+        {
+			posDifference = originalPos - transform.position;
+			transform.position += Vector3.ClampMagnitude(posDifference, reelSpeed);
+			if (posDifference.magnitude < 1)
+				reeling = false;
+        }
 	}
 
 	private void FixedUpdate()
