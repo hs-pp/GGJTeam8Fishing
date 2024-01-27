@@ -6,10 +6,12 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance { get; private set; }
 
+
+    bool paused = false;
     [SerializeField] float fadeSpeed = 1f;
 
     //General Idea
-    //Should be a UI on screen at all times
+    //Probably a UI on screen at all times
     //Whether its the newspaper screen, the main UI, pause, or whatever
     //Use StartCoroutine(Transtion(from, to)) to swap between them
 
@@ -27,6 +29,9 @@ public class UIManager : MonoBehaviour
 
 
 
+    CanvasGroup[] uis;
+
+
 
     private static WaitForEndOfFrame _EndOfFrame;
     private static WaitForFixedUpdate _FixedUpdate;
@@ -40,10 +45,20 @@ public class UIManager : MonoBehaviour
     }
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        uis = new CanvasGroup[] { newspaperUI, mainUI, pauseUI };
+        foreach(CanvasGroup c in uis)
+        {
+            c.alpha = 0;
+            c.gameObject.SetActive(false);
+        }
+        newspaperUI.gameObject.SetActive(true);
+        newspaperUI.alpha = 1f;
+        newspaperAnim.Play("NewspaperSpin", -1, 0);
         
     }
 
@@ -56,9 +71,32 @@ public class UIManager : MonoBehaviour
             newspaperAnim.Play("NewspaperSpin", -1, 0);
             StartCoroutine(Transition(mainUI, newspaperUI));
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseOrUnPause();
+        }
     }
 
-
+    private void PauseOrUnPause()
+    {
+        if (paused)
+        {
+            pauseUI.gameObject.SetActive(false);
+            pauseUI.alpha = 0f;
+            mainUI.gameObject.SetActive(true);
+            mainUI.alpha = 1f;
+            paused = false;
+        }
+        else if (mainUI.alpha == 1 && mainUI.gameObject.activeSelf)
+        {
+            pauseUI.gameObject.SetActive(true);
+            pauseUI.alpha = 1f;
+            mainUI.gameObject.SetActive(false);
+            mainUI.alpha = 0f;
+            paused = true;
+        }
+    }
 
     private IEnumerator Transition(CanvasGroup decrease, CanvasGroup increase)
     {
@@ -84,5 +122,11 @@ public class UIManager : MonoBehaviour
         StartCoroutine(Transition(newspaperUI, mainUI));
     }
     
+
+    public void ResumeClick()
+    {
+        PauseOrUnPause();
+    }
+
 
 }
