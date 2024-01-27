@@ -1,5 +1,5 @@
 using System.Collections;
-using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class FishRender : MonoBehaviour
@@ -9,24 +9,25 @@ public class FishRender : MonoBehaviour
     [SerializeField]
     private Transform m_catchPoint;
     [SerializeField]
+    private float m_visionRadius;
+    [SerializeField]
     private DialogueBubble m_dialogueBubble;
+
+    public FishInstance FishInstance { get; private set; }
 
     public void Awake()
     {
         m_dialogueBubble.Show(false);
     }
-    public void RotateLeft()
-    {
-        m_fishSprite.transform.rotation = Quaternion.Euler(0, 180, 0);
-    }
-    public void RotateRight()
-    {
-        m_fishSprite.transform.rotation = Quaternion.identity;
-    }
 
-    public void RotateUp()
+    public void SetFishInstance(FishInstance instance)
     {
-        m_fishSprite.transform.rotation = Quaternion.Euler(0, 0, 90);
+        FishInstance = instance;
+    }
+    
+    public void Rotate(Vector3 rotate)
+    {
+        m_fishSprite.transform.rotation = Quaternion.Euler(rotate);
     }
     
     public void PlayDialogue(string dialogue)
@@ -35,6 +36,11 @@ public class FishRender : MonoBehaviour
             StopCoroutine(m_dialogueCoroutine);
         
         m_dialogueCoroutine = StartCoroutine(TimedDialogue(dialogue));
+    }
+
+    public Vector3 GetCatchPoint()
+    {
+        return m_catchPoint.position;
     }
     
     private Coroutine m_dialogueCoroutine;
@@ -46,5 +52,10 @@ public class FishRender : MonoBehaviour
         m_dialogueBubble.Show(true);
         yield return new WaitForSeconds(4);
         m_dialogueBubble.Show(false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Handles.DrawWireDisc(transform.position, Vector3.forward, m_visionRadius, 5);
     }
 }

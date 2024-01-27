@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2687558747265113390}
   - component: {fileID: 2194137515694477723}
+  - component: {fileID: 8648356190250876807}
+  - component: {fileID: 2077701932548689074}
   m_Layer: 0
   m_Name: CatchPoint
   m_TagString: Untagged
@@ -84,6 +86,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8648356190250876807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504347541246761567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fcea35a5cf97345b1cc95217d24081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fishRender: {fileID: 408912936045935151}
+--- !u!58 &2077701932548689074
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504347541246761567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.22
 --- !u!1 &7092353088351178402
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fishSprite: {fileID: 8324891131427811796}
-  m_catchPoint: {fileID: 2687558747265113390}
+  m_catchPoint: {fileID: 0}
+  m_visionRadius: 8
   m_dialogueBubble: {fileID: 3386144970987226547}
 --- !u!1 &9180236220735275705
 GameObject:
