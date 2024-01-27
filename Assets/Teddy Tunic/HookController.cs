@@ -6,8 +6,8 @@ public class HookController : MonoBehaviour
 {
 	[SerializeField] LineRender Line; // Fishing rod line, don't confuse the name with LineRender(er)
 	[SerializeField] GameObject HookPoint; // The point where the fish get snapped to
-	[SerializeField] float HookVelocity;
-	[SerializeField] float HookMaxDistance;
+	[SerializeField] float Velocity;
+	[SerializeField] float MaxDistance;
 
 	Vector3 _moveDirection;
 
@@ -37,12 +37,12 @@ public class HookController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Vector3 displacement =  _moveDirection * HookVelocity * Time.fixedDeltaTime;
+		Vector3 displacement =  _moveDirection * Velocity * Time.fixedDeltaTime;
 		Vector3 newPosition = transform.position + displacement;
 		Vector3 hookToLine = Line.transform.position - newPosition;
 
 		// Update hook's position as long as it's new position is within max distance
-		if (hookToLine.sqrMagnitude <= (HookMaxDistance * HookMaxDistance))
+		if (hookToLine.sqrMagnitude <= (MaxDistance * MaxDistance))
 		{
 			transform.position = newPosition;
 		}
