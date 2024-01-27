@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 222350933
+    locked: 0
+  - name: Characters
+    uniqueID: 427944907
+    locked: 0
+  - name: Underwater
+    uniqueID: 3689749409
+    locked: 0
+  - name: Water
+    uniqueID: 1569098021
+    locked: 0
+  - name: Environment
+    uniqueID: 4253661555
+    locked: 0
