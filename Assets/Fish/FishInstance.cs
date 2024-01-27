@@ -22,6 +22,8 @@ public class FishInstance : MonoBehaviour
     private float m_speed = 10f;
     [SerializeField]
     private List<Vector3> m_waypoints;
+    [SerializeField]
+    private List<DialogueConfig> m_dialogueConfigs;
     
     private FishRender m_fishRender;
     private FishState m_fishState = FishState.Swimming;
@@ -38,14 +40,18 @@ public class FishInstance : MonoBehaviour
         if (m_fishState == FishState.Swimming)
         {
             WaypointMovement();
+            LookTowardsMoveDirection();
         }
+    }
 
-        LookTowardsMoveDirection();
+    public void SetState(FishState state)
+    {
+        m_fishState = state;
     }
     
-    public Vector3 GetCatchPoint()
+    public void Rotate(Vector3 rotate)
     {
-        return m_fishRender.GetCatchPoint();
+        transform.rotation = Quaternion.Euler(rotate);
     }
     
     private IEnumerator PlayDialogueAfterWait()
@@ -113,11 +119,11 @@ public class FishInstance : MonoBehaviour
         {
             if (moveDirection.x > 0)
             {
-                m_fishRender.Rotate(new Vector3(0, 180, 0));
+                Rotate(new Vector3(0, 180, 0));
             }
             else
             {
-                m_fishRender.Rotate(new Vector3(0, 0, 0));
+                Rotate(new Vector3(0, 0, 0));
             }
         }
 

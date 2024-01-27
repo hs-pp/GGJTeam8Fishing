@@ -5,5 +5,5 @@ using System.Collections.Generic;
 public class GameState
 {
     public int Money;
-    public List<string> CaughtFishGuids = new();
+    public List<string> CaughtFishUniqueIds = new();
 }

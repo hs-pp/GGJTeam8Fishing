@@ -25,11 +25,6 @@ public class FishRender : MonoBehaviour
         FishInstance = instance;
     }
     
-    public void Rotate(Vector3 rotate)
-    {
-        transform.rotation = Quaternion.Euler(rotate);
-    }
-    
     public void PlayDialogue(string dialogue)
     {
         if(m_dialogueCoroutine != null)

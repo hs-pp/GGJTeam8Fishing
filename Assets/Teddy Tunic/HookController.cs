@@ -10,6 +10,11 @@ public class HookController : MonoBehaviour
 	[SerializeField] float MaxDistance;
 
 	Vector3 _moveDirection;
+	
+	public Transform GetHookPoint()
+	{
+		return HookPoint.transform;
+	}
 
 	private void Update()
 	{
