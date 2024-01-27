@@ -14,8 +14,6 @@ public class FishInstanceEditor : Editor
         EditorGUILayout.LabelField("GUID", guidProperty.stringValue);
         GUI.enabled = true;
         
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
-
         EditorGUI.BeginChangeCheck();
         SerializedProperty fishDefinitionProperty = serializedObject.FindProperty("m_fishDefinition");
         EditorGUILayout.PropertyField(fishDefinitionProperty);
@@ -45,8 +43,9 @@ public class FishInstanceEditor : Editor
                     child.transform.SetParent(fish.transform);   
                 }
             }
-            
         }
+        
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
         
         serializedObject.ApplyModifiedProperties();
     }

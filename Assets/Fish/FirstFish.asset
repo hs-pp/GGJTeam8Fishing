@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d6974576449f648ba0662962ce11f5, type: 3}
   m_Name: FirstFish
   m_EditorClassIdentifier: 
-  m_fishName: 
-  m_fishValue: 0
-  m_fishSprite: {fileID: 0}
+  Species: ClipArt
+  Description: 
+  FishRender: {fileID: 408912936045935151, guid: e20a123da362d4e4bb1d9dbeb8018167, type: 3}
+  Value: 100
