@@ -27,7 +27,7 @@ public class FishRender : MonoBehaviour
     
     public void Rotate(Vector3 rotate)
     {
-        m_fishSprite.transform.rotation = Quaternion.Euler(rotate);
+        transform.rotation = Quaternion.Euler(rotate);
     }
     
     public void PlayDialogue(string dialogue)

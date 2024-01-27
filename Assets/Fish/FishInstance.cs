@@ -1,6 +1,13 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
+public enum FishState
+{
+    Swimming,
+    Aware,
+    Caught,
+}
 
 public class FishInstance : MonoBehaviour
 {
@@ -12,10 +19,12 @@ public class FishInstance : MonoBehaviour
     [SerializeField]
     private string m_fishName;
     [SerializeField]
-    private float m_speed = 2f;
-    private Vector3 m_destination;
+    private float m_speed = 10f;
+    [SerializeField]
+    private List<Vector3> m_waypoints;
     
     private FishRender m_fishRender;
+    private FishState m_fishState = FishState.Swimming;
 
     public void Awake()
     {
@@ -26,28 +35,12 @@ public class FishInstance : MonoBehaviour
     
     private void Update()
     {
-        SimpleMovement();
-    }
-    
-    private void SimpleMovement()
-    {
-        // get new point
-        if (Vector3.Magnitude(transform.position - m_destination) < 0.01f)
+        if (m_fishState == FishState.Swimming)
         {
-            float randomX = UnityEngine.Random.Range(-10f, 10f);
-            m_destination = new Vector3(randomX, 2, 0);
-            //Debug.Log($"New Destination: {destination}");
+            WaypointMovement();
         }
-        
-        // move towards point
-        transform.position = Vector3.MoveTowards(transform.position, m_destination, m_speed * Time.deltaTime);
 
-        // Inefficient to do this every frame but... eh.
-        bool isMovingLeft = (transform.position.x - m_destination.x) < 0;
-        if(isMovingLeft)
-            m_fishRender.Rotate(new Vector3(0, 180, 0));
-        else
-            m_fishRender.Rotate(Vector3.zero);
+        LookTowardsMoveDirection();
     }
     
     public Vector3 GetCatchPoint()
@@ -81,11 +74,56 @@ public class FishInstance : MonoBehaviour
         
         // create new child
         GameObject child = Instantiate(fishDefinition.FishRender).gameObject;
-        child.hideFlags = HideFlags.NotEditable;
         child.transform.SetParent(transform);
         child.transform.localPosition = Vector3.zero;
+        child.hideFlags = HideFlags.NotEditable;
+        for(int i = 0; i < child.transform.childCount; i++)
+        {
+            child.transform.GetChild(i).gameObject.hideFlags = HideFlags.NotEditable;
+        }
         return true;
     }
+
+    private int m_waypointIndex = 0;
+    private void WaypointMovement()
+    {
+        if (m_waypoints.Count == 0)
+        {
+            return;
+        }
+
+        Vector3 destination = m_waypoints[m_waypointIndex];
+        if (Vector3.Magnitude(transform.position - destination) < 0.01f)
+        {
+            m_waypointIndex++;
+            if (m_waypointIndex >= m_waypoints.Count)
+            {
+                m_waypointIndex = 0;
+            }
+        }
+        transform.position = Vector3.MoveTowards(transform.position, destination, m_speed * Time.deltaTime);
+    }
+
+    private Vector3 m_lastPosition;
+    private void LookTowardsMoveDirection()
+    {
+        Vector3 newPosition = transform.position;
+        Vector3 moveDirection = newPosition - m_lastPosition;
+        if (moveDirection.magnitude > 0.01f)
+        {
+            if (moveDirection.x > 0)
+            {
+                m_fishRender.Rotate(new Vector3(0, 180, 0));
+            }
+            else
+            {
+                m_fishRender.Rotate(new Vector3(0, 0, 0));
+            }
+        }
+
+        m_lastPosition = transform.position;
+    }
+    
     
     [UnityEditor.Callbacks.DidReloadScripts]
     private static void RefreshSpawns()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -39,7 +40,29 @@ public class FishInstanceEditor : Editor
         }
         
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
-        
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_waypoints"));
         serializedObject.ApplyModifiedProperties();
+    }
+
+    protected void OnSceneGUI()
+    {
+        SerializedProperty waypointsSP = serializedObject.FindProperty("m_waypoints");
+        
+        for (int i = 0; i < waypointsSP.arraySize; i++)
+        {
+            SerializedProperty waypointSP = waypointsSP.GetArrayElementAtIndex(i);
+            EditorGUI.BeginChangeCheck();
+            Vector3 newPos = Handles.FreeMoveHandle(waypointSP.vector3Value, .5f,
+                new Vector3(0.01f, 0.01f, 0), Handles.SphereHandleCap);
+            if (EditorGUI.EndChangeCheck())
+            {
+                waypointSP.vector3Value = new Vector3(newPos.x, newPos.y, 0);
+                serializedObject.ApplyModifiedProperties();
+            }
+            
+            Vector3 nextPos = i == waypointsSP.arraySize - 1 ? waypointsSP.GetArrayElementAtIndex(0).vector3Value : waypointsSP.GetArrayElementAtIndex(i + 1).vector3Value;
+            Handles.DrawDottedLine(waypointSP.vector3Value, nextPos, 10);
+            Handles.Label(new Vector3(waypointSP.vector3Value.x, waypointSP.vector3Value.y + 0.5f, 0), i.ToString(), EditorStyles.boldLabel);
+        }
     }
 }
