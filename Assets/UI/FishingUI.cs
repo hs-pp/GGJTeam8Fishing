@@ -15,11 +15,11 @@ public class FishingUI : MonoBehaviour
 	private void Start()
 	{
 		_isPaused = false;
+		moneyText.text = "Day: " + GameStateManager.GetDay().ToString();
 	}
 
 	private void Update()
 	{
-		moneyText.text = "Money: " + GameStateManager.GetMoney().ToString();
 		baitAmountText.text = "Bait: " + GameStateManager.GetBaitAmount().ToString();
 
 		if (Input.GetKeyDown(KeyCode.Escape))

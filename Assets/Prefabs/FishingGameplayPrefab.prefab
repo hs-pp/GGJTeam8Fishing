@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6100600209735044703, guid: 43372bf0743dcfb48aec458f52de4f37, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6109050285376366882, guid: 43372bf0743dcfb48aec458f52de4f37, type: 3}
       propertyPath: m_Name
       value: FishingUI
