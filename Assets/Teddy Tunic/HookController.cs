@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HookController : MonoBehaviour
@@ -9,6 +10,9 @@ public class HookController : MonoBehaviour
 	[SerializeField] float maxDistance;
 	[SerializeField] float autoreelVelocity;
 	[SerializeField] float dropoffDistance; // Make this a tiny number
+	[SerializeField] AudioSource reelingSFX;
+	[SerializeField] List<AudioSource> fishBiteSFX;
+	[SerializeField] List<AudioSource> fishCaughtSFX;
 
 	public enum State
 	{
@@ -70,6 +74,8 @@ public class HookController : MonoBehaviour
 				// Fish is caught
 				if (_startPosition == transform.position || hookToStart.sqrMagnitude <= (dropoffDistance * dropoffDistance))
 				{
+					reelingSFX.Stop();
+					fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
 					GameStateManager.DecrementBait();
 					OnCatchFish?.Invoke(_caughtFish);
 					_caughtFish = null;
@@ -109,9 +115,11 @@ public class HookController : MonoBehaviour
 	{
 		CatchPoint catchPoint = collision.gameObject.GetComponent<CatchPoint>();
 		if (catchPoint != null && _caughtFish == null)
-		{		
+		{	
 			_caughtFish = catchPoint.CatchFish(hookPoint.transform);
 			_currentState = State.AUTOREELING;
+			fishBiteSFX[UnityEngine.Random.Range(0, fishBiteSFX.Count)].Play();
+			reelingSFX.Play();
 		}
 	}
 }

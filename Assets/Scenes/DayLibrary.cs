@@ -8,8 +8,8 @@ using UnityEngine;
 public class Day
 {
 	public List<DialogueItem> DocksDialogue;
-	public string NewspaperTitle;
-	public string NewspaperBody;
+	public Sprite NewspaperSprite;
+	public AudioClip FishingBGM;
 }
 
 [CreateAssetMenu(fileName = "AllDaysLibrary", menuName = "AllDaysLibrary")]

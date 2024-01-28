@@ -24,6 +24,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: Son of Fish...erman
     NewspaperBody: Mr. Tunic leaves son with the family fishing business!
+    NewspaperSprite: {fileID: 21300000, guid: 30d6d6dab6032d84488900485c91d32b, type: 3}
+    FishingBGM: {fileID: 8300000, guid: 9905483b705c85e41a2b84fadde4fc09, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: A fine day for fishing isn't it Teddy?
@@ -35,6 +37,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: A Fantastic Day for Fishing!
     NewspaperBody: Who would want to do anything else?
+    NewspaperSprite: {fileID: 21300000, guid: ec43044873fd4a9449e62a3fa02aee27, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e1ff176c6ed32dc45987c1ea2576f9cf, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: A fine day for fishing isn't it Teddy?
@@ -46,6 +50,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: Another Great Day for Fishing!
     NewspaperBody: It's almost like it's your calling!
+    NewspaperSprite: {fileID: 21300000, guid: 10e40c3dc625eea41aa90ec3e1b62e83, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e1ff176c6ed32dc45987c1ea2576f9cf, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: A fine day for fishing isn't it Teddy?
@@ -57,6 +63,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: Another Amazing Day for Fishing!
     NewspaperBody: Keep on keeping on!
+    NewspaperSprite: {fileID: 21300000, guid: 94f11421668994142a8a28e3991939c4, type: 3}
+    FishingBGM: {fileID: 8300000, guid: 188ed0284819dd549804428bd50b80a4, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
@@ -74,6 +82,8 @@ MonoBehaviour:
       DialogueText: Thanks
     NewspaperTitle: Fishing is the funnest thing ever!
     NewspaperBody: And fish definitely absolutely do not talk!
+    NewspaperSprite: {fileID: 21300000, guid: 2e8e07719500c6a4caa548d3b4cb62a5, type: 3}
+    FishingBGM: {fileID: 8300000, guid: 188ed0284819dd549804428bd50b80a4, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
@@ -85,6 +95,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: Another day perfect for fishing!
     NewspaperBody: "Reports of talking fish? That\u2019s absurd."
+    NewspaperSprite: {fileID: 21300000, guid: 08929c39975b8a54499ba7d3e4ead6c4, type: 3}
+    FishingBGM: {fileID: 8300000, guid: 188ed0284819dd549804428bd50b80a4, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
@@ -96,6 +108,8 @@ MonoBehaviour:
       DialogueText: Thanks.
     NewspaperTitle: "Big SALE at Fish N\u2019 Trips!"
     NewspaperBody: "Isn\u2019t Mr. Jefferson the best?"
+    NewspaperSprite: {fileID: 21300000, guid: 115d6ff44eb40f74da22bab3a7e0c7a6, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e0e9d3a24e4c680408678829f9e30480, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
@@ -116,6 +130,8 @@ MonoBehaviour:
       DialogueText: Thanks...I guess...
     NewspaperTitle: "Fish! Fish! Fish! That\u2019s all there is folks!"
     NewspaperBody: Not a day goes by without it happening!
+    NewspaperSprite: {fileID: 21300000, guid: 6386d238c253a814289bb11bf3da8ef5, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e0e9d3a24e4c680408678829f9e30480, type: 3}
   - DocksDialogue:
     - Speaker: 1
       DialogueText: Another fine day. But not so many fish this time.
@@ -135,6 +151,10 @@ MonoBehaviour:
       DialogueText: Nope!
     NewspaperTitle: Fish Shortage!
     NewspaperBody: "What\u2019s going on with the fish supply?"
+    NewspaperSprite: {fileID: 21300000, guid: fd6d422b97b7a1f4c8e57e99fdb13c33, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e0e9d3a24e4c680408678829f9e30480, type: 3}
   - DocksDialogue: []
     NewspaperTitle: A New Day
     NewspaperBody: Will Teddy finally choose a life for himself?
+    NewspaperSprite: {fileID: 21300000, guid: b103064d61f277b40b195ecbb53849c3, type: 3}
+    FishingBGM: {fileID: 8300000, guid: e0e9d3a24e4c680408678829f9e30480, type: 3}
