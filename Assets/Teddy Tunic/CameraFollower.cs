@@ -39,7 +39,8 @@ public class CameraFollower : MonoBehaviour
 
         
         Vector3 targetPosition = target.position + offset;
-
+        targetPosition.x = 0;
+        targetPosition.z = -1;
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
 
     }
