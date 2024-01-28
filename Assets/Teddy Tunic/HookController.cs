@@ -30,6 +30,8 @@ public class HookController : MonoBehaviour
 	{
 		_startPosition = transform.position;
 		_currentState = State.PLAYER_CONTROLLED;
+
+		GameStateManager.ResetBait();
 	}
 
 	private void Update()
