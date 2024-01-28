@@ -151,7 +151,7 @@ public class FishInstance : MonoBehaviour
             string dialogue = m_idleDialogues.GetDialogue();
             if (!string.IsNullOrEmpty(dialogue))
             {
-                m_fishRender.PlayDialogue(dialogue);
+                PlayDialogue(dialogue);
             }
         }
     }
@@ -167,12 +167,17 @@ public class FishInstance : MonoBehaviour
         }
         
         string dialogueConfig = validConfigs[Random.Range(0, validConfigs.Count)];
-        m_fishRender.PlayDialogue(dialogueConfig);
+        PlayDialogue(dialogueConfig);
     }
 
     private List<DialogueItem> GetDialogueWhenCaught()
     {
         return m_fishWasCaughtDialogues.Conversation;
+    }
+
+    public void PlayDialogue(string dialogue)
+    {
+        m_fishRender.PlayDialogue(dialogue);
     }
     
     [UnityEditor.Callbacks.DidReloadScripts]
