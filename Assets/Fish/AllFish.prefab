@@ -54,14 +54,19 @@ MonoBehaviour:
   - {x: -0.8219533, y: -18.626736, z: 0}
   - {x: 3.8242602, y: -12.952446, z: 0}
   m_idleDialogues:
-    m_dialogueTexts: []
+    m_dialogueTexts:
+    - 'I''m so grateful to be alive today! '
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: By Jove, I have been aprehended! Fish Lord have mercy.
+      DialogueText: I'll fight you right now.
+    - Speaker: 2
+      DialogueText: How?
+    - Speaker: 2
+      DialogueText: "I haven\u2019t figured that part out yet."
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - What is the meaning of this??
+    - NOOOOOOO
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &24982739926028773
@@ -1513,12 +1518,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &175168206623192756
@@ -6769,10 +6771,10 @@ MonoBehaviour:
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: Blub
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - Blub!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &1095883408298404524
@@ -7670,18 +7672,18 @@ MonoBehaviour:
   - {x: 1.6635494, y: -18.748205, z: 0}
   m_idleDialogues:
     m_dialogueTexts:
-    - 'I''m so grateful to be alive today! '
+    - I wonder what I should eat today?
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: I'll fight you right now.
+      DialogueText: Please, I have two wives and a kid
     - Speaker: 0
-      DialogueText: How?
+      DialogueText: "Don\u2019t you mean two kids and a wife?"
     - Speaker: 2
-      DialogueText: "I haven\u2019t figured that part out yet."
+      DialogueText: I said what I said.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - You want a piece of me?
+    - I don't like piercings!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &1271704040178686596
@@ -11399,12 +11401,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &2019704582811127198
@@ -14554,12 +14553,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &2943551284977333522
@@ -16170,12 +16166,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &3192337974348287957
@@ -17192,10 +17185,10 @@ MonoBehaviour:
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: Dub
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - Dub!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &3301420042758208853
@@ -25616,10 +25609,10 @@ MonoBehaviour:
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: Por favor dios no me dejes morir
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - "\xBFQu\xE9 diablos es eso?"
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &5098722378136163066
@@ -26776,12 +26769,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &5326721430892107690
@@ -29613,14 +29603,15 @@ MonoBehaviour:
   - {x: 5.3043017, y: -5.0987797, z: 0}
   - {x: -6.4553165, y: -9.251741, z: 0}
   m_idleDialogues:
-    m_dialogueTexts: []
+    m_dialogueTexts:
+    - Gotta get my cardio in!
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Por favor dios no me dejes morir
+      DialogueText: ...
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - "\xBFQu\xE9 diablos es eso?"
+    - CARDIOOOO
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &5990728884146276718
@@ -32582,14 +32573,15 @@ MonoBehaviour:
   - {x: -6.7730083, y: -21.882545, z: 0}
   - {x: 5.012345, y: -19.43658, z: 0}
   m_idleDialogues:
-    m_dialogueTexts: []
+    m_dialogueTexts:
+    - Where are my friends?
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: By Jove, I have been aprehended! Fish Lord have mercy.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - What is the meaning of this??
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &6422820216684308938
@@ -32901,12 +32893,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &6477086263170859214
@@ -33146,19 +33135,18 @@ MonoBehaviour:
   - {x: -1.2435676, y: -12.63011, z: 0}
   - {x: 7.200288, y: -8.778906, z: 0}
   m_idleDialogues:
-    m_dialogueTexts:
-    - I wonder what I should eat today?
+    m_dialogueTexts: []
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Please, I have two wives and a kid
+      DialogueText: Flub
     - Speaker: 0
       DialogueText: "Don\u2019t you mean two kids and a wife?"
     - Speaker: 2
       DialogueText: I said what I said.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - I don't like piercings!
+    - Flub!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &6532668161319136396
@@ -39484,19 +39472,18 @@ MonoBehaviour:
   - {x: -6.5764346, y: -16.078953, z: 0}
   - {x: 5.35314, y: -16.69667, z: 0}
   m_idleDialogues:
-    m_dialogueTexts:
-    - The weather's nice today.
+    m_dialogueTexts: []
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Please, my son is ill.
+      DialogueText: Wubwub
     - Speaker: 0
       DialogueText: With what?
     - Speaker: 2
       DialogueText: With an illness.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ew.
+    - Wubwub!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &7600460937968030255
@@ -40305,14 +40292,19 @@ MonoBehaviour:
   - {x: 6.5792155, y: -16.036274, z: 0}
   - {x: -2.795661, y: -16.200726, z: 0}
   m_idleDialogues:
-    m_dialogueTexts: []
+    m_dialogueTexts:
+    - Glub...Glub...
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: Our Fish Lord, who art in the ocean, hallowed be thy fishy name.
+        Thy fishdom come; They will be done in water as it is in fishy heaven. Give
+        us this tide our daily breadcrumb; and forgive us our watery trespasses as
+        we forgive those who watery trespass against us; and lead us not into the
+        depths, but deliver us from the abyss. Hail Merlin, full of grace.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - Glub!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &7689894946091824451
@@ -46390,7 +46382,8 @@ MonoBehaviour:
   - {x: -5.8185635, y: -20.92484, z: 0}
   - {x: 2.8415618, y: -21.735306, z: 0}
   m_idleDialogues:
-    m_dialogueTexts: []
+    m_dialogueTexts:
+    - TF is that?
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
@@ -46574,10 +46567,10 @@ MonoBehaviour:
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+      DialogueText: '*muffled* LET ME GO! YOU ARE A MONSTER!'
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Ah!
+    - Hey! HEY WAIT!
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &8727898350440300463
@@ -47422,12 +47415,9 @@ MonoBehaviour:
   m_idleDialogues:
     m_dialogueTexts: []
   m_fishWasCaughtDialogues:
-    Conversation:
-    - Speaker: 2
-      DialogueText: Oh my GOD! OH MY GOD! OH MY GOD! PLEASE! NO! PLEASE, GOD NO!
+    Conversation: []
   m_dialogueConfigRunaways:
-    m_dialogueTexts:
-    - Ah!
+    m_dialogueTexts: []
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &8870079414520448485
@@ -47485,20 +47475,18 @@ MonoBehaviour:
   - {x: 4.3999314, y: -14.556071, z: 0}
   m_idleDialogues:
     m_dialogueTexts:
-    - Gotta get my cardio in!
+    - The weather's nice today.
   m_fishWasCaughtDialogues:
     Conversation:
     - Speaker: 2
-      DialogueText: Our Fish Lord, who art in the ocean, hallowed be thy fishy name.
-        Thy fishdom come; They will be done in water as it is in fishy heaven. Give
-        us this tide our daily breadcrumb; and forgive us our watery trespasses as
-        we forgive those who watery trespass against us; and lead us not into the
-        depths, but deliver us from the abyss. Hail Merlin, full of grace.
+      DialogueText: Please, my son is ill.
     - Speaker: 0
-      DialogueText: ...
+      DialogueText: With what?
+    - Speaker: 2
+      DialogueText: With an illness.
   m_dialogueConfigRunaways:
     m_dialogueTexts:
-    - Swim away!
+    - Ew.
   m_hasCaughtOtherFishDialogues:
     m_fishIdToDialogue: []
 --- !u!1 &8877381031626264185
