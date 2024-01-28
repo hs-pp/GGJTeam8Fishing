@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9a388c03cdd3c63489551f176c1c52a7
   - enabled: 1
+    path: Assets/Scenes/Newspaper.unity
+    guid: 7928fe90ac12f044eab3e91781ed4add
+  - enabled: 1
+    path: Assets/Docks/Docks.unity
+    guid: 3e290efe65b315946a234f177b65f686
+  - enabled: 1
     path: Assets/Scenes/Day1_Fishing.unity
     guid: 7ab26c918ef244c4d8820640407a29f3
   m_configObjects: {}

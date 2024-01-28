@@ -47,7 +47,7 @@ public class CaughtFishScene : MonoBehaviour
 
 		if (GameStateManager.GetBaitAmount() == 0)
 		{
-			_sceneLoader.FadeOutScreen();
+			_sceneLoader.LoadNextScene();
 		}
 		else
 		{

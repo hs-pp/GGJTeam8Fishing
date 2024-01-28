@@ -10,12 +10,14 @@ public class SceneLoader : MonoBehaviour
 	[SerializeField] float fadeInTime;
     [SerializeField] AnimationCurve fadeOutCurve;
 	[SerializeField] float fadeOutTime;
+	[SerializeField] string nextSceneToLoad;
 
 	AnimationCurve _animationCurve;
 	float _currentTime;
 	float _fadeTime;
 	Action _onFadeComplete;
 	bool _isFading = false;
+	string _sceneToLoad;
 		
 	private void Start()
 	{
@@ -48,23 +50,39 @@ public class SceneLoader : MonoBehaviour
 		_onFadeComplete = null;
 	}
 
-	public void FadeOutScreen()
+	public void LoadNextScene()
 	{
 		_animationCurve = fadeOutCurve;
 		_currentTime = 0.0f;
 		_fadeTime = fadeOutTime;
 		_isFading = true;
-		_onFadeComplete = LoadNextScene;
+		_sceneToLoad = nextSceneToLoad;
+		_onFadeComplete = LoadScene;
 	}
 
-	private void LoadNextScene()
+	public void LoadScene(string sceneName)
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		_animationCurve = fadeOutCurve;
+		_currentTime = 0.0f;
+		_fadeTime = fadeOutTime;
+		_isFading = true;
+		_sceneToLoad = sceneName;
+		_onFadeComplete = LoadScene;
 	}
 
-	public void LoadMainMenu()
+	public void LoadFishingScene()
 	{
-		SceneManager.LoadScene(0);
+		_animationCurve = fadeOutCurve;
+		_currentTime = 0.0f;
+		_fadeTime = fadeOutTime;
+		_isFading = true;
+		_sceneToLoad = "Day" + GameStateManager.GetDay().ToString() + "_Fishing";
+		_onFadeComplete = LoadScene;
+	}
+
+	private void LoadScene()
+	{
+		SceneManager.LoadScene(_sceneToLoad);
 	}
 
 	public void QuitGame()
