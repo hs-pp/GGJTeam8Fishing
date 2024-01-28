@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.08
+      value: 10.26
       objectReference: {fileID: 0}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.69
+      value: 10.87
       objectReference: {fileID: 0}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2893,10 +2893,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueScene: {fileID: 1633879181}
   _dialogueItems:
-  - Speaker: 2
-    DialogueText: Thank you
   - Speaker: 0
-    DialogueText: Any time dawg.
+    DialogueText: "You\u2019re free now, fishies."
+  - Speaker: 2
+    DialogueText: So are you, Teddy
+  - Speaker: 0
+    DialogueText: What will you do now?
+  - Speaker: 2
+    DialogueText: Live out the rest of our 1-3 year lives. What about you, Teddy?
+      What will you do now that you are free from your net?
+  - Speaker: 0
+    DialogueText: "I\u2026I don\u2019t know yet."
+  - Speaker: 2
+    DialogueText: "Well that\u2019s the fun part isn\u2019t it? Figuring it out.
+      It\u2019s what your father would have wanted."
+  - Speaker: 0
+    DialogueText: My father?
+  - Speaker: 2
+    DialogueText: Blub!
   _sceneLoader: {fileID: 87753894}
 --- !u!114 &1633879181
 MonoBehaviour:

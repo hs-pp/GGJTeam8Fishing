@@ -16,10 +16,16 @@ public class DialogueScene : MonoBehaviour
 
     bool _sceneActive = false;
 
-
+    private float _initialWait;
     // Update is called once per frame
     void Update()
     {
+        if(_initialWait > 0)
+        {
+            _initialWait -= Time.deltaTime;
+            return;
+        }
+        
         if(_sceneActive && Input.GetKeyDown(KeyCode.Space))
         {
             AdvanceDialogue();
@@ -27,12 +33,12 @@ public class DialogueScene : MonoBehaviour
     }
 
     //Scene is started here
-    public void NewScene(List<DialogueItem> dialogueItems)
+    public void NewScene(List<DialogueItem> dialogueItems, float initialWait = 0)
     {
+        _initialWait = initialWait;
         _sceneActive = true;
         _dialogueItems = new List<DialogueItem>(dialogueItems);
         
-        Debug.Log(_dialogueItems.Count);
         if(_dialogueItems.Count > 0)
             AdvanceDialogue();
     }

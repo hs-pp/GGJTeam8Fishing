@@ -63,15 +63,15 @@ public class CaughtFishScene : MonoBehaviour
 		
 		if (GameStateManager.GetDay() == 2 && GameStateManager.GetBaitAmount() == 0)
 		{
-			dialogueScene.NewScene(_day2Dialogue);
+			dialogueScene.NewScene(_day2Dialogue, 2);
 		}
 		else if (GameStateManager.GetDay() == 4 && GameStateManager.GetBaitAmount() == 2)
 		{
-			dialogueScene.NewScene(_day4Dialogue);
+			dialogueScene.NewScene(_day4Dialogue, 2);
 		}
 		else if (GameStateManager.GetDay() == 5 && GameStateManager.GetBaitAmount() == 0)
 		{
-			dialogueScene.NewScene(_day5Dialogue);
+			dialogueScene.NewScene(_day5Dialogue, 2);
 		}
 		else if (GameStateManager.GetDay() == 8)
 		{
