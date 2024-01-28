@@ -23,6 +23,21 @@ public static class GameStateManager
     {
         m_gameState.Money -= amount;
     }
+
+    public static int GetBaitAmount()
+    {
+        return m_gameState.BaitAmount;
+    }
+
+    public static void DecrementBait()
+    {
+        m_gameState.BaitAmount--;
+    }
+
+    public static void ResetBait()
+    {
+        m_gameState.BaitAmount = 5;
+    }
     
     public static void AddCaughtFish(string uniqueId)
     {
