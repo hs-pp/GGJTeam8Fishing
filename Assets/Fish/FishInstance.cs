@@ -182,7 +182,7 @@ public class FishInstance : MonoBehaviour
     }
     
     [UnityEditor.Callbacks.DidReloadScripts]
-    private static void RefreshSpawns()
+    public static void RefreshPrespawns()
     {
         FishInstance[] fishInstances = FindObjectsOfType<FishInstance>();
         foreach (FishInstance fishInstance in fishInstances)
