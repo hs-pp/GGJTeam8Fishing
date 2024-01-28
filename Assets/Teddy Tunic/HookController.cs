@@ -68,6 +68,7 @@ public class HookController : MonoBehaviour
 				// Fish is caught
 				if (_startPosition == transform.position || hookToStart.sqrMagnitude <= (dropoffDistance * dropoffDistance))
 				{
+					GameStateManager.DecrementBait();
 					OnCatchFish?.Invoke(_caughtFish);
 					_caughtFish = null;
 					_currentState = State.IDLE;
