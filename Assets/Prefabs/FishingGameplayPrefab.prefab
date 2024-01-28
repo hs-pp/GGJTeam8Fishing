@@ -464,6 +464,95 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teddy Tunic Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day2Dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day5Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day2Dialogue.Array.data[0].Speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[0].Speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[1].Speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[2].Speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[3].Speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[4].Speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[5].Speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[6].Speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day5Dialogue.Array.data[1].Speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day2Dialogue.Array.data[0].DialogueText
+      value: you come out here often?
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[0].DialogueText
+      value: Does this make you feel like a big man?
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[1].DialogueText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[2].DialogueText
+      value: "It\u2019s cuz I don\u2019t have thumbs huh? You think thumbs make you
+        special?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[3].DialogueText
+      value: "Are you\u2026 talking to me?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[4].DialogueText
+      value: "No, I\u2019m talking to the fish net."
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[5].DialogueText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day4Dialogue.Array.data[6].DialogueText
+      value: "Obviously, I\u2019m talking to you. You gonna let me go or what?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day5Dialogue.Array.data[0].DialogueText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 740295863908742106, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: _day5Dialogue.Array.data[1].DialogueText
+      value: "Oh so we\u2019re quiet today?"
+      objectReference: {fileID: 0}
     - target: {fileID: 4291429947005892927, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.68

@@ -18,7 +18,11 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] private GameObject evilBackground;
 
 	[SerializeField]
-	private List<DialogueItem> _day3Dialogue;
+	private List<DialogueItem> _day2Dialogue;
+	[SerializeField]
+	private List<DialogueItem> _day4Dialogue;
+	[SerializeField]
+	private List<DialogueItem> _day5Dialogue;
 	[SerializeField]
 	private List<DialogueItem> _day8Dialogue;
 
@@ -57,9 +61,17 @@ public class CaughtFishScene : MonoBehaviour
 		fishingRod.SetActive(false);
 		teddyAnim.Play("Hold");
 		
-		if (GameStateManager.GetDay() == 3 && GameStateManager.GetBaitAmount() == 0)
+		if (GameStateManager.GetDay() == 2 && GameStateManager.GetBaitAmount() == 0)
 		{
-			dialogueScene.NewScene(_day3Dialogue);
+			dialogueScene.NewScene(_day2Dialogue);
+		}
+		else if (GameStateManager.GetDay() == 4 && GameStateManager.GetBaitAmount() == 2)
+		{
+			dialogueScene.NewScene(_day4Dialogue);
+		}
+		else if (GameStateManager.GetDay() == 5 && GameStateManager.GetBaitAmount() == 0)
+		{
+			dialogueScene.NewScene(_day5Dialogue);
 		}
 		else if (GameStateManager.GetDay() == 8)
 		{

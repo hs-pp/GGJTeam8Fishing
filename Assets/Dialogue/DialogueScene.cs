@@ -31,6 +31,8 @@ public class DialogueScene : MonoBehaviour
     {
         _sceneActive = true;
         _dialogueItems = new List<DialogueItem>(dialogueItems);
+        
+        Debug.Log(_dialogueItems.Count);
         if(_dialogueItems.Count > 0)
             AdvanceDialogue();
     }
