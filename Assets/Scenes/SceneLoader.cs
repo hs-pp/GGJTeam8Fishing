@@ -10,7 +10,6 @@ public class SceneLoader : MonoBehaviour
 	[SerializeField] float fadeInTime;
     [SerializeField] AnimationCurve fadeOutCurve;
 	[SerializeField] float fadeOutTime;
-	[SerializeField] int nextSceneBuildIndex;
 
 	AnimationCurve _animationCurve;
 	float _currentTime;
@@ -60,7 +59,7 @@ public class SceneLoader : MonoBehaviour
 
 	private void LoadNextScene()
 	{
-		SceneManager.LoadScene(nextSceneBuildIndex);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 	public void QuitGame()
