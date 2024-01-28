@@ -185,17 +185,6 @@ public class FishInstance : MonoBehaviour
         DialogueConfig dialogueConfig = validConfigs[Random.Range(0, validConfigs.Count)];
         m_fishRender.PlayDialogue(dialogueConfig.DialogueText);
     }
-
-    private List<DialogueItem> GetDialogueWhenCaught()
-    {
-        if(m_fishWasCaughtDialogues.Count == 0)
-        {
-            return null;
-        }
-        
-        DialogueConfigFishWasCaught dialogueConfig = m_fishWasCaughtDialogues[Random.Range(0, m_fishWasCaughtDialogues.Count)];
-        return dialogueConfig.Dialogues;
-    }
     
     
     [UnityEditor.Callbacks.DidReloadScripts]
