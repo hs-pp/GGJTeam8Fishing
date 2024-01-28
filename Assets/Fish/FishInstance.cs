@@ -43,6 +43,10 @@ public class FishInstance : MonoBehaviour
     public void Awake()
     {
         m_fishRender = GetComponentInChildren<FishRender>();
+        if (GameStateManager.GetDay() < m_earliestDayAvailable || GameStateManager.HasCaughtFish(m_uniqueName))
+        {
+            DestroyImmediate(gameObject);
+        }
     }
 
     private void Start()
