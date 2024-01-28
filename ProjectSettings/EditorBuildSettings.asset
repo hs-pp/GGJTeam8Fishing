@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Docks/Docks.unity
     guid: 3e290efe65b315946a234f177b65f686
   - enabled: 1
-    path: Assets/Scenes/Day1_Fishing.unity
+    path: Assets/Scenes/Fishing.unity
     guid: 7ab26c918ef244c4d8820640407a29f3
   m_configObjects: {}

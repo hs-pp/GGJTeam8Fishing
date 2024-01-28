@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6040aa0d87d70f34c8366908727a2bdb, type: 3}
+  m_Name: AllDaysLibrary
+  m_EditorClassIdentifier: 
+  Days:
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: A fine day for fishing isn't it Teddy?
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: Son of Fish...erman
+    NewspaperBody: Mr. Tunic leaves son with the family fishing business!
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: A fine day for fishing isn't it Teddy?
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: A Fantastic Day for Fishing!
+    NewspaperBody: Who would want to do anything else?
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: A fine day for fishing isn't it Teddy?
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: Another Great Day for Fishing!
+    NewspaperBody: It's almost like it's your calling!
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: A fine day for fishing isn't it Teddy?
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: Another Amazing Day for Fishing!
+    NewspaperBody: Keep on keeping on!
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
+    - Speaker: 0
+      DialogueText: ...
+    - Speaker: 0
+      DialogueText: Mr. Jefferson, have fish ever...
+    - Speaker: 1
+      DialogueText: Ever what?
+    - Speaker: 0
+      DialogueText: 'Nevermind. '
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks
+    NewspaperTitle: Fishing is the funnest thing ever!
+    NewspaperBody: And fish definitely absolutely do not talk!
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: Another day perfect for fishing!
+    NewspaperBody: "Reports of talking fish? That\u2019s absurd."
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
+    - Speaker: 0
+      DialogueText: I guess so, Mr. Jefferson.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks.
+    NewspaperTitle: "Big SALE at Fish N\u2019 Trips!"
+    NewspaperBody: "Isn\u2019t Mr. Jefferson the best?"
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: "A fine day for fishing isn\u2019t it Teddy?"
+    - Speaker: 0
+      DialogueText: Mr. Jefferson, you were close friend with my dad, right?
+    - Speaker: 1
+      DialogueText: He fished for me as you do now.
+    - Speaker: 0
+      DialogueText: Did he ever talk to you about anything else? Like if he wanted
+        to do anything else with his life?
+    - Speaker: 1
+      DialogueText: Why would he want to do anything else?
+    - Speaker: 0
+      DialogueText: I guess I don't really know.
+    - Speaker: 1
+      DialogueText: I wish you a day of good fortune.
+    - Speaker: 0
+      DialogueText: Thanks...I guess...
+    NewspaperTitle: "Fish! Fish! Fish! That\u2019s all there is folks!"
+    NewspaperBody: Not a day goes by without it happening!
+  - DocksDialogue:
+    - Speaker: 1
+      DialogueText: Another fine day. But not so many fish this time.
+    - Speaker: 0
+      DialogueText: I'm not sure I want to fish anymore.
+    - Speaker: 1
+      DialogueText: Where are the fish, Teddy?
+    - Speaker: 0
+      DialogueText: ...
+    - Speaker: 1
+      DialogueText: Where are the fish, Teddy?
+    - Speaker: 0
+      DialogueText: ...
+    - Speaker: 1
+      DialogueText: WherearethefishTeddy?WHEREARETHEFISHTEDDY?WHEREARETHEFISHWHEREARETHEFISHWHEREARETHEFISH?
+    - Speaker: 0
+      DialogueText: Nope!
+    NewspaperTitle: Fish Shortage!
+    NewspaperBody: "What\u2019s going on with the fish supply?"
+  - DocksDialogue: []
+    NewspaperTitle: A New Day
+    NewspaperBody: Will Teddy finally choose a life for himself?
