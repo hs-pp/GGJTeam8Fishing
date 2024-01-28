@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213859677293149534}
   m_Layer: 0
-  m_Name: Catch Point
+  m_Name: Hook Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,10 +79,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03bf2ea5a4ca1d46b68f2265b33de0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Line: {fileID: 3969758338174518431}
-  HookPoint: {fileID: 972691209917390172}
-  Velocity: 5
-  MaxDistance: 40
+  line: {fileID: 3969758338174518431}
+  hookPoint: {fileID: 972691209917390172}
+  velocity: 6
+  maxDistance: 80
+  autoreelVelocity: 15
+  dropoffDistance: 0.2
 --- !u!61 &2314782962518318938
 BoxCollider2D:
   m_ObjectHideFlags: 0
