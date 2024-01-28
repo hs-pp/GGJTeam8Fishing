@@ -187,6 +187,7 @@ public class FishInstance : MonoBehaviour
         m_fishRender.PlayDialogue(dialogue);
     }
     
+#if UnityEditor
     [UnityEditor.Callbacks.DidReloadScripts]
     public static void RefreshPrespawns()
     {
@@ -196,6 +197,7 @@ public class FishInstance : MonoBehaviour
             fishInstance.AutoSpawnDefinition(fishInstance.m_fishDefinition);
         }
     }
+#endif
     
     public bool AutoSpawnDefinition(FishDefinition fishDefinition)
     {

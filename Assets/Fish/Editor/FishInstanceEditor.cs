@@ -42,7 +42,9 @@ public class FishInstanceEditor : Editor
 
         if (GUILayout.Button("Reload", GUILayout.Width(100)))
         {
+            #if UnityEditor
             FishInstance.RefreshPrespawns();
+#endif
         }
         GUILayout.EndHorizontal();
         
