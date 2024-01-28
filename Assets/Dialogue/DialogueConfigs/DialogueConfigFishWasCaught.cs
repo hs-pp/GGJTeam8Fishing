@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueConfigFishWasCaught : DialogueConfig
+[Serializable]
+public class DialogueConfigFishWasCaught
 {
-    public List<DialogueItem> Dialogues = new();
+    public List<DialogueItem> Conversation = new();
 }
 
 [Serializable]
