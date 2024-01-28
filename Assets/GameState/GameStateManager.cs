@@ -14,6 +14,11 @@ public static class GameStateManager
     {
         m_gameState.Day++;
     }
+
+    public static int GetMoney()
+    {
+        return m_gameState.Money;
+    }
     
     public static void AddMoney(int amount)
     {

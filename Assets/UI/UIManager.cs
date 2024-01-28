@@ -29,13 +29,7 @@ public class UIManager : MonoBehaviour
     [Header("Pause UI")]
     [SerializeField] CanvasGroup pauseUI;
 
-
-
     CanvasGroup[] uis;
-
-    [SerializeField] TextMeshProUGUI baitAmountText;
-
-
 
     private static WaitForEndOfFrame _EndOfFrame;
     private static WaitForFixedUpdate _FixedUpdate;
@@ -47,9 +41,6 @@ public class UIManager : MonoBehaviour
     {
         get { return _EndOfFrame ?? (_EndOfFrame = new WaitForEndOfFrame()); }
     }
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -68,8 +59,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        baitAmountText.text = "Bait: " + GameStateManager.GetBaitAmount().ToString();
-
         /*if(Input.GetKeyDown(KeyCode.Space))
         {
             newspaperUI.gameObject.SetActive(true);
