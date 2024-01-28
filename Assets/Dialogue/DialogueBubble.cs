@@ -15,4 +15,9 @@ public class DialogueBubble : MonoBehaviour
     {
         gameObject.SetActive(show);
     }
+
+    public void Update()
+    {
+        transform.rotation = Quaternion.identity;
+    }
 }
