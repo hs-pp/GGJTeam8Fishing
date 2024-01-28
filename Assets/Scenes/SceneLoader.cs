@@ -76,7 +76,7 @@ public class SceneLoader : MonoBehaviour
 		_currentTime = 0.0f;
 		_fadeTime = fadeOutTime;
 		_isFading = true;
-		_sceneToLoad = "Day" + GameStateManager.GetDay().ToString() + "_Fishing";
+		_sceneToLoad = "Fishing";
 		_onFadeComplete = LoadScene;
 	}
 

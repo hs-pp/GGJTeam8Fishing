@@ -5,6 +5,11 @@ using UnityEngine;
 public static class GameStateManager
 {
     private static GameState m_gameState = new GameState();
+
+    public static int GetLastDay()
+    {
+        return m_gameState.TotalDays;
+    }
     
     public static int GetDay()
     {

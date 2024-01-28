@@ -26,18 +26,18 @@ MonoBehaviour:
       DialogueText: thx
   - Dialogue:
     - Speaker: 0
-      DialogueText: wassup bro
+      DialogueText: asdasd
     - Speaker: 1
-      DialogueText: skibidi toilet
+      DialogueText: wot
     - Speaker: 0
       DialogueText: okay bye
   - Dialogue:
     - Speaker: 0
-      DialogueText: wassup bro
+      DialogueText: hi
     - Speaker: 1
-      DialogueText: skibidi toilet
+      DialogueText: watchu say yesterday
     - Speaker: 0
-      DialogueText: okay bye
+      DialogueText: uh nothing bye
   - Dialogue:
     - Speaker: 0
       DialogueText: wassup bro

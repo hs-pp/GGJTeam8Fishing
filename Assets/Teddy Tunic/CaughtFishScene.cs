@@ -47,7 +47,16 @@ public class CaughtFishScene : MonoBehaviour
 
 		if (GameStateManager.GetBaitAmount() == 0)
 		{
-			_sceneLoader.LoadNextScene();
+			if(GameStateManager.GetDay() < GameStateManager.GetLastDay())
+			{
+				GameStateManager.IncrementDay();
+				_sceneLoader.LoadScene("Newspaper");
+			}
+			else
+			{
+				_sceneLoader.LoadScene("Main Menu"); // Prolly should be a credits scene once we have that
+			}
+
 		}
 		else
 		{
