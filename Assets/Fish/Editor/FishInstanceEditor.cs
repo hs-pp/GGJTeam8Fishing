@@ -31,6 +31,7 @@ public class FishInstanceEditor : Editor
         }
         GUILayout.EndHorizontal();
 
+        GUILayout.BeginHorizontal();
         EditorGUI.BeginChangeCheck();
         SerializedProperty fishDefinitionProperty = serializedObject.FindProperty("m_fishDefinition");
         EditorGUILayout.PropertyField(fishDefinitionProperty);
@@ -38,6 +39,12 @@ public class FishInstanceEditor : Editor
         {
             (target as FishInstance).AutoSpawnDefinition(fishDefinitionProperty.objectReferenceValue as FishDefinition);
         }
+
+        if (GUILayout.Button("Reload", GUILayout.Width(100)))
+        {
+            FishInstance.RefreshPrespawns();
+        }
+        GUILayout.EndHorizontal();
         
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_speed"));
