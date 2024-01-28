@@ -171,7 +171,7 @@ public class FishInstance : MonoBehaviour
         PlayDialogue(dialogueConfig);
     }
 
-    private List<DialogueItem> GetDialogueWhenCaught()
+    public List<DialogueItem> GetDialogueWhenCaught()
     {
         return m_fishWasCaughtDialogues.Conversation;
     }
