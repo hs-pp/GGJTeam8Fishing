@@ -12,6 +12,10 @@ public class DialogueConfigWhenIdle
 
     public string GetDialogue()
     {
+        if (m_dialogueTexts.Count == 0)
+        {
+            return "";
+        }
         return m_dialogueTexts[Random.Range(0, m_dialogueTexts.Count)];
     }
 }

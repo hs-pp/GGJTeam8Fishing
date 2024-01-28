@@ -6,6 +6,15 @@ public static class GameStateManager
 {
     private static GameState m_gameState = new GameState();
     
+    public static int GetDay()
+    {
+        return m_gameState.Day;
+    }
+    public static void IncrementDay()
+    {
+        m_gameState.Day++;
+    }
+    
     public static void AddMoney(int amount)
     {
         m_gameState.Money += amount;

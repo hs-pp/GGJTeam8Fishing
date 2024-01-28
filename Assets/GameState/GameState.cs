@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class GameState
 {
+    public int Day;
     public int Money;
     public List<string> CaughtFishUniqueIds = new();
 }
