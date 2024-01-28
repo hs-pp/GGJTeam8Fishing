@@ -33,6 +33,11 @@ public static class GameStateManager
     {
         return m_gameState.CaughtFishUniqueIds.Contains(uniqueId);
     }
+    
+    public static int NumCaughtFish()
+    {
+        return m_gameState.CaughtFishUniqueIds.Count;
+    }
 
     public static void ResetGameState()
     {
