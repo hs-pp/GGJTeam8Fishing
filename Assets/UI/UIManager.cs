@@ -70,12 +70,12 @@ public class UIManager : MonoBehaviour
     {
         baitAmountText.text = "Bait: " + GameStateManager.GetBaitAmount().ToString();
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*if(Input.GetKeyDown(KeyCode.Space))
         {
             newspaperUI.gameObject.SetActive(true);
             newspaperAnim.Play("NewspaperSpin", -1, 0);
             StartCoroutine(Transition(mainUI, newspaperUI));
-        }
+        }*/
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {
