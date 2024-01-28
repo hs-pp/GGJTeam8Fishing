@@ -19,6 +19,7 @@ public class FishInstance : MonoBehaviour
     public string UniqueId => m_uniqueId;
     [SerializeField]
     private string m_fishName;
+    public string FishName => m_fishName;
     [SerializeField]
     private float m_speed = 1f;
     [SerializeField]

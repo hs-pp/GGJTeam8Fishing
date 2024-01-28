@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEditor;
+using TMPro;
 using UnityEngine;
 
 public class FishRender : MonoBehaviour
@@ -10,6 +10,8 @@ public class FishRender : MonoBehaviour
     private Transform m_catchPoint;
     [SerializeField]
     private DialogueBubble m_dialogueBubble;
+    [SerializeField]
+    private TextMeshProUGUI m_nameTagText;
 
     public FishInstance FishInstance { get; private set; }
 
@@ -21,6 +23,7 @@ public class FishRender : MonoBehaviour
     public void SetFishInstance(FishInstance instance)
     {
         FishInstance = instance;
+        m_nameTagText.text = FishInstance.FishName;
     }
     
     public void PlayDialogue(string dialogue)
