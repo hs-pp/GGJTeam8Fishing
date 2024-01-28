@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
-using UnityEngine.EventSystems;
 
 public class HookController : MonoBehaviour
 {
@@ -16,13 +13,16 @@ public class HookController : MonoBehaviour
 	public enum State
 	{
 		PLAYER_CONTROLLED,
-		AUTOREELING
+		AUTOREELING,
+		IDLE
 	}
 
 	Vector3 _startPosition;
 	Vector3 _moveDirection;
 	State _currentState;
 	FishInstance _caughtFish;
+
+	public Action<FishInstance> OnCatchFish;
 
 	public void SetState(State state) => _currentState = state;
 
@@ -34,11 +34,11 @@ public class HookController : MonoBehaviour
 
 	private void Update()
 	{
-		switch(_currentState)
+		_moveDirection = Vector3.zero;
+
+		switch (_currentState)
 		{
 			case State.PLAYER_CONTROLLED:
-
-				_moveDirection = Vector3.zero;
 
 				if (Input.GetKey(KeyCode.W))
 				{
@@ -68,12 +68,9 @@ public class HookController : MonoBehaviour
 				// Fish is caught
 				if (_startPosition == transform.position || hookToStart.sqrMagnitude <= (dropoffDistance * dropoffDistance))
 				{
-					_currentState = State.PLAYER_CONTROLLED;
-
-					// TODO: Let the game manager know we caught the fish
-					// Dunno if we should destroy but leaving it for now
-					Destroy(_caughtFish.gameObject);
+					OnCatchFish?.Invoke(_caughtFish);
 					_caughtFish = null;
+					_currentState = State.IDLE;
 				}
 				else
 				{
@@ -83,6 +80,10 @@ public class HookController : MonoBehaviour
 					transform.position += displacement;
 				}
 
+				break;
+
+			case State.IDLE:
+				// Literally do nothing, let another script change its state
 				break;
 		}
 	}
@@ -105,9 +106,8 @@ public class HookController : MonoBehaviour
 	{
 		CatchPoint catchPoint = collision.gameObject.GetComponent<CatchPoint>();
 		if (catchPoint != null && _caughtFish == null)
-		{
-			catchPoint.CatchFish(hookPoint.transform);
-			_caughtFish = catchPoint.GetFishInstance();
+		{		
+			_caughtFish = catchPoint.CatchFish(hookPoint.transform);
 			_currentState = State.AUTOREELING;
 		}
 	}

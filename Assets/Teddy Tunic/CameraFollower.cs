@@ -14,7 +14,7 @@ public class CameraFollower : MonoBehaviour
     [SerializeField] bool includeOffset = false;
     [SerializeField] bool startFollowing = false;
 
-    
+    public void ChangeTarget(Transform _target) => target = _target;
 
     Vector3 offset;
     Camera cam;

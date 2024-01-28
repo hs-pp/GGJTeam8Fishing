@@ -8,6 +8,7 @@ public enum FishState
     Idle,
     Runaway,
     Reeling,
+    Caught
 }
 
 public class FishInstance : MonoBehaviour
