@@ -47,6 +47,7 @@ public class FishInstanceEditor : Editor
         GUILayout.EndHorizontal();
         
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_speed"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_earliestDayAvailable"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_waypoints"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_idleDialogues"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_dialogueConfigRunaways"));

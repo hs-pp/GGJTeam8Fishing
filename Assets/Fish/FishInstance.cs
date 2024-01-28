@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public enum FishState
@@ -20,6 +18,8 @@ public class FishInstance : MonoBehaviour
     public string UniqueName => m_uniqueName;
     [SerializeField]
     private float m_speed = 1f;
+    [SerializeField, Range(1, 10)]
+    private int m_earliestDayAvailable = 1;
     [SerializeField]
     private List<Vector3> m_waypoints;
     [SerializeField]
