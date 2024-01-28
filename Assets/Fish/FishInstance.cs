@@ -16,11 +16,8 @@ public class FishInstance : MonoBehaviour
     [SerializeField]
     private FishDefinition m_fishDefinition;
     [SerializeField]
-    public string m_uniqueId;
-    public string UniqueId => m_uniqueId;
-    [SerializeField]
-    private string m_fishName;
-    public string FishName => m_fishName;
+    public string m_uniqueName;
+    public string UniqueName => m_uniqueName;
     [SerializeField]
     private float m_speed = 1f;
     [SerializeField]
@@ -46,10 +43,13 @@ public class FishInstance : MonoBehaviour
     public void Awake()
     {
         m_fishRender = GetComponentInChildren<FishRender>();
+    }
+
+    private void Start()
+    {
         m_fishRender.SetFishInstance(this);
         SetState(FishState.Idle);
     }
-
     
     private void Update()
     {
@@ -123,7 +123,7 @@ public class FishInstance : MonoBehaviour
     
     private void RunawayMovement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + m_runawayDirection, m_speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + m_runawayDirection, (m_speed * 2f) * Time.deltaTime);
     }
     
     private void LookTowardsMoveDirection()

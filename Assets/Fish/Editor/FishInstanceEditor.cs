@@ -11,20 +11,20 @@ public class FishInstanceEditor : Editor
         serializedObject.Update();
         
         GUILayout.BeginHorizontal();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_uniqueId"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_uniqueName"));
         if (GUILayout.Button("Validate", GUILayout.Width(100)))
         {
             FishInstance[] fishInstances = FindObjectsOfType<FishInstance>();
             HashSet<string> uniqueIds = new HashSet<string>();
             foreach (FishInstance fishInstance in fishInstances)
             {
-                if (uniqueIds.Contains(fishInstance.UniqueId))
+                if (uniqueIds.Contains(fishInstance.UniqueName))
                 {
-                    Debug.LogError("Duplicate Unique ID: " + fishInstance.UniqueId);
+                    Debug.LogError("Duplicate Unique ID: " + fishInstance.UniqueName);
                 }
                 else
                 {
-                    uniqueIds.Add(fishInstance.UniqueId);
+                    uniqueIds.Add(fishInstance.UniqueName);
                 }
             }
             Debug.Log("Finished validating Unique IDs");
@@ -46,7 +46,6 @@ public class FishInstanceEditor : Editor
         }
         GUILayout.EndHorizontal();
         
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_speed"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_waypoints"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_idleDialogues"));

@@ -23,7 +23,7 @@ public class FishRender : MonoBehaviour
     public void SetFishInstance(FishInstance instance)
     {
         FishInstance = instance;
-        m_nameTagText.text = FishInstance.FishName;
+        m_nameTagText.text = FishInstance.UniqueName;
     }
     
     public void PlayDialogue(string dialogue)
