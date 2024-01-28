@@ -24,13 +24,18 @@ public class FishInstance : MonoBehaviour
     private float m_speed = 1f;
     [SerializeField]
     private List<Vector3> m_waypoints;
+    [SerializeField]
+    private DialogueConfigWhenIdle m_idleDialogues;
+    [SerializeField]
+    private DialogueConfigFishWasCaught m_fishWasCaughtDialogues;
+    [SerializeField]
+    private DialogueConfigRunaway m_dialogueConfigRunaways;
+    [SerializeField]
+    private DialogueConfigHasCaughtOtherFish m_hasCaughtOtherFishDialogues;
     
     private FishRender m_fishRender;
     private FishState m_fishState = FishState.Idle;
-    private List<DialogueConfigWhenIdle> m_idleDialogues = new();
-    private List<DialogueConfigFishWasCaught> m_fishWasCaughtDialogues = new();
-    private List<DialogueConfigHasCaughtOtherFish> m_hasCaughtOtherFishDialogues = new();
-    private List<DialogueConfigRunaway> m_dialogueConfigRunaways = new();
+    
     private Vector3 m_lastPosition;
     private float m_timeSinceIdleDialogue = 0;
     private float m_waitBeforeIdleDialogue = 0;
@@ -41,17 +46,9 @@ public class FishInstance : MonoBehaviour
     {
         m_fishRender = GetComponentInChildren<FishRender>();
         m_fishRender.SetFishInstance(this);
-        CollectDialogueConfigs();
         SetState(FishState.Idle);
     }
 
-    private void CollectDialogueConfigs()
-    {
-        m_idleDialogues = GetComponents<DialogueConfigWhenIdle>().ToList();
-        m_fishWasCaughtDialogues = GetComponents<DialogueConfigFishWasCaught>().ToList();
-        m_hasCaughtOtherFishDialogues = GetComponents<DialogueConfigHasCaughtOtherFish>().ToList();
-        m_dialogueConfigRunaways = GetComponents<DialogueConfigRunaway>().ToList();
-    }
     
     private void Update()
     {
@@ -146,57 +143,37 @@ public class FishInstance : MonoBehaviour
 
     private void EvaluateIdleDialogue()
     {
-        if(m_idleDialogues.Count == 0)
-        {
-            return;
-        }
-        
         m_timeSinceIdleDialogue += Time.deltaTime;
         if (m_timeSinceIdleDialogue > m_waitBeforeIdleDialogue)
         {
             m_timeSinceIdleDialogue = 0;
             m_waitBeforeIdleDialogue = Random.Range(5f, 10f);
-            DialogueConfigWhenIdle dialogueConfig = m_idleDialogues[Random.Range(0, m_idleDialogues.Count)];
-            m_fishRender.PlayDialogue(dialogueConfig.DialogueText);
+            string dialogue = m_idleDialogues.GetDialogue();
+            if (!string.IsNullOrEmpty(dialogue))
+            {
+                m_fishRender.PlayDialogue(dialogue);
+            }
         }
     }
 
     private void EvaluateRunawayDialogue()
     {
-        if(m_dialogueConfigRunaways.Count == 0 && m_hasCaughtOtherFishDialogues.Count == 0)
-        {
-            return;
-        }
-
-        List<DialogueConfig> validConfigs = new List<DialogueConfig>(m_dialogueConfigRunaways);
-        foreach(DialogueConfigHasCaughtOtherFish dialogueConfigToCheck in m_hasCaughtOtherFishDialogues)
-        {
-            if(dialogueConfigToCheck.IsConditionMet())
-            {
-                validConfigs.Add(dialogueConfigToCheck);
-            }
-        }
+        List<string> validConfigs = new List<string>(m_dialogueConfigRunaways.GetValidDialogues());
+        validConfigs.AddRange(m_hasCaughtOtherFishDialogues.GetValidDialogues());
         
         if(validConfigs.Count == 0)
         {
             return;
         }
         
-        DialogueConfig dialogueConfig = validConfigs[Random.Range(0, validConfigs.Count)];
-        m_fishRender.PlayDialogue(dialogueConfig.DialogueText);
+        string dialogueConfig = validConfigs[Random.Range(0, validConfigs.Count)];
+        m_fishRender.PlayDialogue(dialogueConfig);
     }
 
     private List<DialogueItem> GetDialogueWhenCaught()
     {
-        if(m_fishWasCaughtDialogues.Count == 0)
-        {
-            return null;
-        }
-        
-        DialogueConfigFishWasCaught dialogueConfig = m_fishWasCaughtDialogues[Random.Range(0, m_fishWasCaughtDialogues.Count)];
-        return dialogueConfig.Dialogues;
+        return m_fishWasCaughtDialogues.Conversation;
     }
-    
     
     [UnityEditor.Callbacks.DidReloadScripts]
     private static void RefreshSpawns()

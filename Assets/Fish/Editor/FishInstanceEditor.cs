@@ -42,6 +42,11 @@ public class FishInstanceEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_speed"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_waypoints"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_idleDialogues"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_dialogueConfigRunaways"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_hasCaughtOtherFishDialogues"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_fishWasCaughtDialogues"));
+        
         serializedObject.ApplyModifiedProperties();
     }
 
