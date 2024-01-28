@@ -9,8 +9,6 @@ public class FishRender : MonoBehaviour
     [SerializeField]
     private Transform m_catchPoint;
     [SerializeField]
-    private float m_visionRadius;
-    [SerializeField]
     private DialogueBubble m_dialogueBubble;
 
     public FishInstance FishInstance { get; private set; }
@@ -27,10 +25,21 @@ public class FishRender : MonoBehaviour
     
     public void PlayDialogue(string dialogue)
     {
-        if(m_dialogueCoroutine != null)
+        if (m_dialogueCoroutine != null)
+        {
             StopCoroutine(m_dialogueCoroutine);
-        
+        }
+
         m_dialogueCoroutine = StartCoroutine(TimedDialogue(dialogue));
+    }
+
+    public void StopDialogue()
+    {
+        if (m_dialogueCoroutine != null)
+        {
+            StopCoroutine(m_dialogueCoroutine);
+            m_dialogueBubble.Show(false);
+        }
     }
 
     public Vector3 GetCatchPoint()
@@ -47,10 +56,5 @@ public class FishRender : MonoBehaviour
         m_dialogueBubble.Show(true);
         yield return new WaitForSeconds(4);
         m_dialogueBubble.Show(false);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Handles.DrawWireDisc(transform.position, Vector3.forward, m_visionRadius, 5);
     }
 }

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206ac8b893986b4faf5f69458d6df9c, type: 3}
   m_Name: DialogueAsset
   m_EditorClassIdentifier: 
-  Dialogues: []
+  Dialogues:
+  - Speaker: 0
+    DialogueText: 
+  - Speaker: 0
+    DialogueText: 
+  - Speaker: 0
+    DialogueText: 
