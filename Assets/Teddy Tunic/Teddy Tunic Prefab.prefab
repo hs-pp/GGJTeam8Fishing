@@ -339,6 +339,57 @@ MonoBehaviour:
   evilJeffersonBubble: {fileID: 9080122613988982482}
   evilJefferson: {fileID: 7485425100110828917}
   evilBackground: {fileID: 1608392708650373708}
+  _day3Dialogue:
+  - Speaker: 2
+    DialogueText: you come out here often
+  _day8Dialogue:
+  - Speaker: 2
+    DialogueText: My kingdom has taken notice of you harvesting my brethren and sister-ren
+  - Speaker: 0
+    DialogueText: "I don\u2019t think that\u2019s a word "
+  - Speaker: 2
+    DialogueText: "\u2026"
+  - Speaker: 2
+    DialogueText: Really?
+  - Speaker: 0
+    DialogueText: " I\u2019m sorry."
+  - Speaker: 2
+    DialogueText: ' I just exposed an entire civilization in this lake and that was
+      your takeaway?'
+  - Speaker: 0
+    DialogueText: It was an impulse.
+  - Speaker: 2
+    DialogueText: 'You think I, a fish, would have mastery of the English language?
+      Where would that even happen? '
+  - Speaker: 0
+    DialogueText: In school.
+  - Speaker: 2
+    DialogueText: ...
+  - Speaker: 0
+    DialogueText: "School. Get it? Because you\u2019re a fish."
+  - Speaker: 2
+    DialogueText: 'Honestly, just eat me now and get it over with. '
+  - Speaker: 0
+    DialogueText: "No, no I\u2019m sorry. You were saying something about your fish
+      kingdom."
+  - Speaker: 2
+    DialogueText: "\u2026"
+  - Speaker: 0
+    DialogueText: "I\u2019m listening this time, I promise."
+  - Speaker: 2
+    DialogueText: My people wish for you to stop kidnapping us. Our economy is failing
+      because we have a shortage of labor. Our people are missing their loved ones.
+      Please end this cruelty.
+  - Speaker: 0
+    DialogueText: "I\u2019m just doing my job."
+  - Speaker: 2
+    DialogueText: Is that what defines your life?
+  - Speaker: 2
+    DialogueText: 'Release me and sleep on it. We can meet again tomorrow should
+      you make your decision. '
+  - Speaker: 2
+    DialogueText: 'Release me and sleep on it. We can meet again tomorrow should
+      you make your decision. '
 --- !u!114 &1630597866139700779
 MonoBehaviour:
   m_ObjectHideFlags: 0

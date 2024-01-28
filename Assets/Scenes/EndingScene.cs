@@ -8,6 +8,8 @@ public class EndingScene : MonoBehaviour
     private DialogueScene _dialogueScene;
     [SerializeField]
     private List<DialogueItem> _dialogueItems;
+    [SerializeField]
+    SceneLoader _sceneLoader;
     
     private void Start()
     {
@@ -18,5 +20,6 @@ public class EndingScene : MonoBehaviour
     private void FinishScene()
     {
         //Open main menu
+        _sceneLoader.LoadScene("Main Menu"); // Prolly should be a credits scene once we have that
     }
 }

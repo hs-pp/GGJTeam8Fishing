@@ -17,6 +17,11 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] private GameObject evilJefferson;
 	[SerializeField] private GameObject evilBackground;
 
+	[SerializeField]
+	private List<DialogueItem> _day3Dialogue;
+	[SerializeField]
+	private List<DialogueItem> _day8Dialogue;
+
 	FishInstance _fishInstance;
 	CameraFollower _cameraFollower;
 	SceneLoader _sceneLoader;
@@ -51,8 +56,22 @@ public class CaughtFishScene : MonoBehaviour
 
 		fishingRod.SetActive(false);
 		teddyAnim.Play("Hold");
-		dialogueScene.NewScene(fishInstance.GetDialogueWhenCaught());
 		
+		if (GameStateManager.GetDay() == 3 && GameStateManager.GetBaitAmount() == 0)
+		{
+			dialogueScene.NewScene(_day3Dialogue);
+		}
+		else if (GameStateManager.GetDay() == 8)
+		{
+			dialogueScene.OnDialogueFinish -= FinishScene;
+			dialogueScene.OnDialogueFinish += InstantFinishScene;
+			dialogueScene.NewScene(_day8Dialogue);
+
+		}
+		else
+		{
+			dialogueScene.NewScene(fishInstance.GetDialogueWhenCaught());
+		}
 	}
 
 	private void FlingFish(FishInstance fishInstance)
@@ -111,6 +130,11 @@ public class CaughtFishScene : MonoBehaviour
 		{
 			hookController.SetState(HookController.State.PLAYER_CONTROLLED);
 		}		
+	}
+
+	private void InstantFinishScene()
+	{
+		_sceneLoader.LoadScene("Newspaper");
 	}
 
 }
