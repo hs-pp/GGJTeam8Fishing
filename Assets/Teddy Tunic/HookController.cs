@@ -16,6 +16,11 @@ public class HookController : MonoBehaviour
 	bool reeling = false;
 
 	Vector3 _moveDirection;
+	
+	public Transform GetHookPoint()
+	{
+		return HookPoint.transform;
+	}
 
     private void Start()
     {

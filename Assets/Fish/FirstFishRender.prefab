@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 32871307453367152}
+  m_Father: {fileID: 7081590634658076977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2194137515694477723
 SpriteRenderer:
@@ -165,6 +165,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32871307453367152}
+  - {fileID: 2687558747265113390}
   - {fileID: 9035011820268812516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fishSprite: {fileID: 8324891131427811796}
   m_catchPoint: {fileID: 0}
-  m_visionRadius: 8
+  m_visionRadius: 2
   m_dialogueBubble: {fileID: 3386144970987226547}
 --- !u!1 &9180236220735275705
 GameObject:
@@ -213,8 +214,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2687558747265113390}
+  m_Children: []
   m_Father: {fileID: 7081590634658076977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8324891131427811796
@@ -255,8 +255,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -605217887
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a200970d69593504e8ab62da87c43329, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -279,11 +279,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1456501659565341146, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 2.94
       objectReference: {fileID: 0}
     - target: {fileID: 1456501659565341146, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 3207898003161935295, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -297,25 +297,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 6615217754063914141, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7260866340372332881, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7260866340372332881, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7260866340372332881, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: 7260866340372332881, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 7260866340372332881, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_Pivot.x
