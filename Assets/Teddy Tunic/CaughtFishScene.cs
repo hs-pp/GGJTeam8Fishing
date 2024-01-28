@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class CaughtFishScene : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] DialogueScene dialogueScene;
 	[SerializeField] Animator teddyAnim;
 	[SerializeField] GameObject fishingRod;
+	[SerializeField] PlayableDirector director;
+	[SerializeField] private Transform flingFishTransform;
+	[SerializeField] private DialogueBubble evilJeffersonBubble;
+	[SerializeField] private GameObject evilJefferson;
+
 
 	FishInstance _fishInstance;
 	CameraFollower _cameraFollower;
@@ -17,7 +23,16 @@ public class CaughtFishScene : MonoBehaviour
 
 	private void Start()
 	{
-		hookController.OnCatchFish += OnCatchFish;
+		if (GameStateManager.GetDay() != 9)
+		{
+			hookController.OnCatchFish += OnCatchFish;
+			evilJefferson.SetActive(false);
+		}
+		else
+		{
+			hookController.OnCatchFish += FlingFish;
+		}
+
 		_cameraFollower = FindObjectOfType<CameraFollower>();
 		_sceneLoader = FindObjectOfType<SceneLoader>();
 		dialogueScene.OnDialogueFinish += FinishScene;
@@ -35,6 +50,37 @@ public class CaughtFishScene : MonoBehaviour
 		teddyAnim.Play("Hold");
 		dialogueScene.NewScene(fishInstance.GetDialogueWhenCaught());
 		
+	}
+
+	private void FlingFish(FishInstance fishInstance)
+	{
+		_fishInstance = fishInstance;
+		_fishInstance.SetState(FishState.Caught);
+		fishInstance.transform.SetParent(flingFishTransform);
+		fishInstance.transform.localPosition = Vector3.zero;
+		_cameraFollower.ChangeTarget(_fishInstance.transform);
+		
+		director.Play();
+		director.stopped += FinishFling;
+	}
+
+	private void FinishFling(PlayableDirector pd)
+	{
+		if (GameStateManager.GetBaitAmount() == 0)
+		{
+			evilJeffersonBubble.Show(true);
+			GameStateManager.IncrementDay();
+			_sceneLoader.LoadScene("Newspaper");
+			return;
+		}
+		
+		fishingRod.SetActive(true);
+		teddyAnim.Play("Idle");
+		_cameraFollower.ChangeTarget(hookController.transform);
+		Destroy(_fishInstance.gameObject);
+		_fishInstance = null;
+		hookController.SetState(HookController.State.PLAYER_CONTROLLED);
+		director.stopped -= FinishFling;
 	}
 
 	private void FinishScene()
