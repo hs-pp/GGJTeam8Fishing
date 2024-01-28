@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueScene: {fileID: 5751475969847274728}
-  docksDialogueLibrary: {fileID: 11400000, guid: fae910b5ee224864089a6d4afa6d3535, type: 2}
+  dayLibrary: {fileID: 11400000, guid: ea2290ce921c23a48b9190b4bb3b6136, type: 2}
   sceneLoader: {fileID: 1572533693748351964}
 --- !u!1 &2558709022847799542
 GameObject:

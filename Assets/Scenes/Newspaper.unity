@@ -430,6 +430,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewsPaperScene Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6376774829700114110, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399524856184235100, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
