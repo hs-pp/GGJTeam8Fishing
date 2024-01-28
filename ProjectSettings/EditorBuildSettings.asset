@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing.unity
     guid: 7ab26c918ef244c4d8820640407a29f3
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 7ac3d425ac4bdd846802744532717c19
   m_configObjects: {}

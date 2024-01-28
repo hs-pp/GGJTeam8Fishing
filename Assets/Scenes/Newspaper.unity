@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &9159423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6039864373247061878, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+  m_PrefabInstance: {fileID: 6263274238170724499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4369e4ee82d1b488d88c8520f013cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &122308306
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +252,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1039031395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 93927595418932905, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+  m_PrefabInstance: {fileID: 6263274238170724499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cbd6702755f874fb7dc27250884eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095104462
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,10 +576,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3837686883983387795, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837686883983387795, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9159423}
+    - target: {fileID: 3837686883983387795, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnStartDayPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837686883983387795, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NewspaperUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4401939012849298047, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
       propertyPath: m_Name
       value: NewsPaperScene Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6039864373247061878, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: SceneLoader
+      value: 
+      objectReference: {fileID: 1039031395}
     - target: {fileID: 6376774829700114110, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
