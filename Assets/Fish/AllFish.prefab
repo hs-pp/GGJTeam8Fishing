@@ -60,7 +60,7 @@ MonoBehaviour:
     Conversation:
     - Speaker: 2
       DialogueText: I'll fight you right now.
-    - Speaker: 2
+    - Speaker: 0
       DialogueText: How?
     - Speaker: 2
       DialogueText: "I haven\u2019t figured that part out yet."

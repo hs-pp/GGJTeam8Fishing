@@ -10,6 +10,6 @@ public class DayTracker : MonoBehaviour
 
     public void Start()
     {
-        m_dayText.text = GameStateManager.GetDay().ToString();
+        m_dayText.text = "Day: " + GameStateManager.GetDay().ToString();
     }
 }

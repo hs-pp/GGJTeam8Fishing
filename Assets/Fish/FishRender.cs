@@ -23,7 +23,15 @@ public class FishRender : MonoBehaviour
     public void SetFishInstance(FishInstance instance)
     {
         FishInstance = instance;
-        m_nameTagText.text = FishInstance.UniqueName;
+        if(GameStateManager.GetDay() < 6)
+        {
+            m_nameTagText.text = "";
+
+        }
+        else
+        {
+            m_nameTagText.text = FishInstance.UniqueName;
+        }
     }
     
     public void PlayDialogue(string dialogue)
