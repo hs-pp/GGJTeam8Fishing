@@ -33,7 +33,7 @@ public class DialogueScene : MonoBehaviour
     }
 
     //Scene is started here
-    public void NewScene(List<DialogueItem> dialogueItems, float initialWait = 0)
+    public void NewScene(List<DialogueItem> dialogueItems, float initialWait = 1)
     {
         _initialWait = initialWait;
         _sceneActive = true;

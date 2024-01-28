@@ -63,22 +63,23 @@ public class CaughtFishScene : MonoBehaviour
 		
 		if (GameStateManager.GetDay() == 2 && GameStateManager.GetBaitAmount() == 0)
 		{
-			dialogueScene.NewScene(_day2Dialogue, 2);
+			dialogueScene.NewScene(_day2Dialogue, 1);
 		}
 		else if (GameStateManager.GetDay() == 4 && GameStateManager.GetBaitAmount() == 2)
 		{
-			dialogueScene.NewScene(_day4Dialogue, 2);
+			dialogueScene.NewScene(_day4Dialogue, 1);
 		}
 		else if (GameStateManager.GetDay() == 5 && GameStateManager.GetBaitAmount() == 0)
 		{
-			dialogueScene.NewScene(_day5Dialogue, 2);
+			dialogueScene.NewScene(_day5Dialogue, 1);
 		}
 		else if (GameStateManager.GetDay() == 8)
 		{
 			dialogueScene.OnDialogueFinish -= FinishScene;
 			dialogueScene.OnDialogueFinish += InstantFinishScene;
 			dialogueScene.NewScene(_day8Dialogue);
-
+			dialogueScene.OnDialogueFinish -= FinishScene;
+			dialogueScene.OnDialogueFinish += Day8FinishScene;
 		}
 		else
 		{
@@ -144,6 +145,12 @@ public class CaughtFishScene : MonoBehaviour
 		{
 			hookController.SetState(HookController.State.PLAYER_CONTROLLED);
 		}		
+	}
+
+	private void Day8FinishScene()
+	{
+		GameStateManager.IncrementDay();
+		_sceneLoader.LoadScene("Newspaper");
 	}
 
 	private void InstantFinishScene()
