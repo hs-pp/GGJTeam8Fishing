@@ -15,7 +15,7 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] private Transform flingFishTransform;
 	[SerializeField] private DialogueBubble evilJeffersonBubble;
 	[SerializeField] private GameObject evilJefferson;
-
+	[SerializeField] private GameObject evilBackground;
 
 	FishInstance _fishInstance;
 	CameraFollower _cameraFollower;
@@ -27,10 +27,13 @@ public class CaughtFishScene : MonoBehaviour
 		{
 			hookController.OnCatchFish += OnCatchFish;
 			evilJefferson.SetActive(false);
+			evilBackground.SetActive(false);
 		}
 		else
 		{
 			hookController.OnCatchFish += FlingFish;
+			evilJefferson.SetActive(true);
+			evilBackground.SetActive(true);
 		}
 
 		_cameraFollower = FindObjectOfType<CameraFollower>();
