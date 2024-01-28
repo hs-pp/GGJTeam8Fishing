@@ -122,6 +122,8 @@ public class CaughtFishScene : MonoBehaviour
 		fishingRod.SetActive(true);
 		teddyAnim.Play("Idle");
 		_cameraFollower.ChangeTarget(hookController.transform);
+		
+		GameStateManager.AddCaughtFish(_fishInstance.UniqueName);
 		Destroy(_fishInstance.gameObject);
 		_fishInstance = null;
 

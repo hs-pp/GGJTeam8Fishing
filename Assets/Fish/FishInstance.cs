@@ -127,7 +127,9 @@ public class FishInstance : MonoBehaviour
     
     private void RunawayMovement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + m_runawayDirection, (m_speed * 2f) * Time.deltaTime);
+        Vector3 runawayPoint = transform.position + m_runawayDirection;
+        runawayPoint.z = 0;
+        transform.position = Vector3.MoveTowards(transform.position, runawayPoint, (m_speed * 2f) * Time.deltaTime);
     }
     
     private void LookTowardsMoveDirection()
