@@ -25,6 +25,7 @@ public class HookController : MonoBehaviour
 	Vector3 _moveDirection;
 	State _currentState;
 	FishInstance _caughtFish;
+	FishRender _caughtFishRender; // yea
 
 	public Action<FishInstance> OnCatchFish;
 
@@ -78,6 +79,8 @@ public class HookController : MonoBehaviour
 					fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
 					GameStateManager.DecrementBait();
 					OnCatchFish?.Invoke(_caughtFish);
+					_caughtFishRender.SetAnimation("Caught");
+					_caughtFishRender = null;
 					_caughtFish = null;
 					_currentState = State.IDLE;
 				}
@@ -117,6 +120,7 @@ public class HookController : MonoBehaviour
 		if (catchPoint != null && _caughtFish == null)
 		{	
 			_caughtFish = catchPoint.CatchFish(hookPoint.transform);
+			_caughtFishRender = catchPoint.FishRender;
 			_currentState = State.AUTOREELING;
 			fishBiteSFX[UnityEngine.Random.Range(0, fishBiteSFX.Count)].Play();
 			reelingSFX.Play();

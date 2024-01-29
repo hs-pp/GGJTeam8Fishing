@@ -7,6 +7,8 @@ public class CatchPoint : MonoBehaviour
     [SerializeField]
     private FishRender m_fishRender;
 
+	public FishRender FishRender => m_fishRender;
+
     public FishInstance CatchFish(Transform hookPoint)
     {
 		m_fishRender.FishInstance.transform.SetParent(hookPoint);
