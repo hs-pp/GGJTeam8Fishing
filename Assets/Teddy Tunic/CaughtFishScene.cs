@@ -17,6 +17,7 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] private DialogueBubble evilJeffersonBubble;
 	[SerializeField] private GameObject evilJefferson;
 	[SerializeField] private GameObject evilBackground;
+	[SerializeField] AudioSource victoryMusic;
 
 	[SerializeField]
 	private List<DialogueItem> _day2Dialogue;
@@ -107,6 +108,7 @@ public class CaughtFishScene : MonoBehaviour
 		{
 			evilJeffersonBubble.Show(true);
 			GameStateManager.IncrementDay();
+			if (victoryMusic) victoryMusic.Play();
 			_sceneLoader.LoadScene("Newspaper");
 			return;
 		}
@@ -132,7 +134,9 @@ public class CaughtFishScene : MonoBehaviour
 
 		if (GameStateManager.GetBaitAmount() == 0)
 		{
-			if(GameStateManager.GetDay() < GameStateManager.GetLastDay())
+			if (victoryMusic) victoryMusic.Play();
+
+			if (GameStateManager.GetDay() < GameStateManager.GetLastDay())
 			{
 				GameStateManager.IncrementDay();
 				_sceneLoader.LoadScene("Newspaper");
@@ -151,12 +155,14 @@ public class CaughtFishScene : MonoBehaviour
 
 	private void Day8FinishScene()
 	{
+		if (victoryMusic) victoryMusic.Play();
 		GameStateManager.IncrementDay();
 		_sceneLoader.LoadScene("Newspaper");
 	}
 
 	private void InstantFinishScene()
 	{
+		if (victoryMusic) victoryMusic.Play();
 		_sceneLoader.LoadScene("Newspaper");
 	}
 
