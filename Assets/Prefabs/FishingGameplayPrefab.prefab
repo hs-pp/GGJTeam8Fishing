@@ -333,6 +333,10 @@ PrefabInstance:
       value: Audio
       objectReference: {fileID: 0}
     - target: {fileID: 2582767711680178600, guid: 37bf822971b32ec4190ecb5e1b765b64, type: 3}
+      propertyPath: m_Volume
+      value: 0.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582767711680178600, guid: 37bf822971b32ec4190ecb5e1b765b64, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: c098277f6ecf6d44db26203945f2b759, type: 3}
@@ -742,6 +746,58 @@ PrefabInstance:
       propertyPath: _day5Dialogue.Array.data[1].DialogueText
       value: "Oh so we\u2019re quiet today?"
       objectReference: {fileID: 0}
+    - target: {fileID: 1364680537878119128, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1770842
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364680537878119128, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1770842
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364680537878119128, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.79427105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364680537878119128, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529935160924389964, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0afded5035c06904985b1644fd8eff5a, type: 3}
+    - target: {fileID: 2641651144248214246, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 17921a2bb7db1a6409987a8d7041bd2e, type: 3}
+    - target: {fileID: 3661011586316211074, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661011586316211074, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661011586316211074, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661011586316211074, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837414748691411063, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837414748691411063, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837414748691411063, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4291429947005892927, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.68
@@ -781,6 +837,34 @@ PrefabInstance:
     - target: {fileID: 4291429947005892927, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781111128140510722, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50fcd25f595f0dc4a9099eb4255f311c, type: 3}
+    - target: {fileID: 6920343759109535124, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920343759109535124, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501751907687801899, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999627076853145433, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2093504423, guid: e248444c5a555f9478da87eaf570158c, type: 3}
+    - target: {fileID: 8463584666931418205, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: velocity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508892100661225908, guid: 7d872ada0f392dd4c9b02ca3c869889f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
