@@ -42,7 +42,7 @@ public class FishInstanceEditor : Editor
 
         if (GUILayout.Button("Reload", GUILayout.Width(100)))
         {
-            #if UnityEditor
+            #if UNITY_EDITOR
             FishInstance.RefreshPrespawns();
 #endif
         }

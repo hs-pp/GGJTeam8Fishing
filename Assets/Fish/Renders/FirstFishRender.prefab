@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_text: {fileID: 4238072320250834424}
+  m_audio: {fileID: 0}
 --- !u!1 &7092353088351178402
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +765,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4223319584704051014, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_audio
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4573871452171513752, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_text
       value: ya text
@@ -880,7 +885,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7458822166874328024, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
