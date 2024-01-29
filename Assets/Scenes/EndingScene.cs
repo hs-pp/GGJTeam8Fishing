@@ -10,7 +10,10 @@ public class EndingScene : MonoBehaviour
     private List<DialogueItem> _dialogueItems;
     [SerializeField]
     SceneLoader _sceneLoader;
-    
+    [SerializeField]
+    CanvasGroup _creditsCanvasGroup;
+
+    private bool canQuit;
     private void Start()
     {
         _dialogueScene.NewScene(_dialogueItems);
@@ -19,7 +22,27 @@ public class EndingScene : MonoBehaviour
 
     private void FinishScene()
     {
-        //Open main menu
-        _sceneLoader.LoadScene("Main Menu"); // Prolly should be a credits scene once we have that
+        StartCoroutine(ShowCredits());
+    }
+
+    IEnumerator ShowCredits()
+    {
+        yield return new WaitForSeconds(2);
+        
+        while(_creditsCanvasGroup.alpha < 1)
+        {
+            _creditsCanvasGroup.alpha += Time.deltaTime / 2;
+            yield return null;
+        }
+        
+        canQuit = true;
+    }
+
+    public void Update()
+    {
+        if (canQuit && Input.GetKeyDown(KeyCode.Space))
+        {
+            _sceneLoader.LoadScene("Main Menu");
+        }
     }
 }
