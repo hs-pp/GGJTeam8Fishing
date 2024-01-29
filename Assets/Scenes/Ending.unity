@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 2.61
       objectReference: {fileID: 0}
+    - target: {fileID: 3207898003161935295, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6615217754063914141, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_Name
       value: DialogueBubble
@@ -255,6 +259,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7458822166874328024, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50fcd25f595f0dc4a9099eb4255f311c, type: 3}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -809,6 +817,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 2.61
       objectReference: {fileID: 0}
+    - target: {fileID: 3207898003161935295, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6615217754063914141, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_Name
       value: DialogueBubble (1)
@@ -837,6 +849,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7458822166874328024, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 17921a2bb7db1a6409987a8d7041bd2e, type: 3}
     - target: {fileID: 7566312638981114385, guid: 4d38d321d45e27c4faaa3cedc5297c87, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

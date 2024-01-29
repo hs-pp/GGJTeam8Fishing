@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -49,7 +50,7 @@ public class CaughtFishScene : MonoBehaviour
 		_sceneLoader = FindObjectOfType<SceneLoader>();
 		dialogueScene.OnDialogueFinish += FinishScene;
 	}
-	private void OnCatchFish(FishInstance fishInstance)
+	private async void OnCatchFish(FishInstance fishInstance)
 	{
 		_fishInstance = fishInstance;
 		_fishInstance.SetState(FishState.Caught);
@@ -60,7 +61,8 @@ public class CaughtFishScene : MonoBehaviour
 
 		fishingRod.SetActive(false);
 		teddyAnim.Play("Hold");
-		
+
+		await Task.Delay(200);
 		if (GameStateManager.GetDay() == 2 && GameStateManager.GetBaitAmount() == 0)
 		{
 			dialogueScene.NewScene(_day2Dialogue, 1);

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class HookController : MonoBehaviour
@@ -38,6 +39,7 @@ public class HookController : MonoBehaviour
 		GameStateManager.ResetBait();
 	}
 
+	private bool reelingIsPlaying = false;
 	private void Update()
 	{
 		_moveDirection = Vector3.zero;
@@ -45,26 +47,40 @@ public class HookController : MonoBehaviour
 		switch (_currentState)
 		{
 			case State.PLAYER_CONTROLLED:
-
+				bool isMoving = false;
 				if (Input.GetKey(KeyCode.W))
 				{
 					_moveDirection += Vector3.up;
+					isMoving = true;
 				}
 				if (Input.GetKey(KeyCode.A))
 				{
 					_moveDirection += Vector3.left;
+					isMoving = true;
 				}
 				if (Input.GetKey(KeyCode.S))
 				{
 					_moveDirection += Vector3.down;
+					isMoving = true;
 				}
 				if (Input.GetKey(KeyCode.D))
 				{
 					_moveDirection += Vector3.right;
+					isMoving = true;
 				}
 
 				_moveDirection.Normalize();
-
+				if (isMoving == true && reelingIsPlaying == false)
+				{
+					reelingSFX.Play();
+					reelingIsPlaying = true;
+				}
+				else
+				{
+					reelingSFX.Stop();
+					reelingIsPlaying = false;
+				}
+				
 				break;
 
 			case State.AUTOREELING:
@@ -111,14 +127,16 @@ public class HookController : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	private async void OnTriggerEnter2D(Collider2D collision)
 	{
 		CatchPoint catchPoint = collision.gameObject.GetComponent<CatchPoint>();
 		if (catchPoint != null && _caughtFish == null)
 		{	
 			_caughtFish = catchPoint.CatchFish(hookPoint.transform);
-			_currentState = State.AUTOREELING;
 			fishBiteSFX[UnityEngine.Random.Range(0, fishBiteSFX.Count)].Play();
+			
+			await Task.Delay(200);
+			_currentState = State.AUTOREELING;
 			reelingSFX.Play();
 		}
 	}

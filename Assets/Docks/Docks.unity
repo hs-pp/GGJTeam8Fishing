@@ -1230,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3383788599084840749, guid: f3b51693b88e0f145a64245766f0a87b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0afded5035c06904985b1644fd8eff5a, type: 3}
     - target: {fileID: 5793097336367054013, guid: f3b51693b88e0f145a64245766f0a87b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1290,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5991475375334110772, guid: f3b51693b88e0f145a64245766f0a87b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50fcd25f595f0dc4a9099eb4255f311c, type: 3}
     - target: {fileID: 6508502559424440827, guid: f3b51693b88e0f145a64245766f0a87b, type: 3}
       propertyPath: m_Name
       value: Docks Prefab
