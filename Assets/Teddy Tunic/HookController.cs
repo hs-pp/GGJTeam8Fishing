@@ -98,7 +98,7 @@ public class HookController : MonoBehaviour
 				if (_startPosition == transform.position || hookToStart.sqrMagnitude <= (dropoffDistance * dropoffDistance))
 				{
 					reelingSFX.Stop();
-					fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
+					//fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
 					GameStateManager.DecrementBait();
 					OnCatchFish?.Invoke(_caughtFish);
 					_caughtFishRender.SetAnimation("Caught");
@@ -136,7 +136,7 @@ public class HookController : MonoBehaviour
 		}
 	}
 
-	private async void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		CatchPoint catchPoint = collision.gameObject.GetComponent<CatchPoint>();
 		if (catchPoint != null && _caughtFish == null)
@@ -146,7 +146,6 @@ public class HookController : MonoBehaviour
 			_currentState = State.AUTOREELING;
 			fishBiteSFX[UnityEngine.Random.Range(0, fishBiteSFX.Count)].Play();
 			
-			await Task.Delay(200);
 			_currentState = State.AUTOREELING;
 			reelingSFX.Play();
 		}

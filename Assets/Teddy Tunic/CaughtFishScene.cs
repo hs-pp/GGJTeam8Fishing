@@ -18,6 +18,7 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] private GameObject evilJefferson;
 	[SerializeField] private GameObject evilBackground;
 	[SerializeField] AudioSource victoryMusic;
+	[SerializeField] List<AudioSource> fishCaughtSFX;
 
 	[SerializeField]
 	private List<DialogueItem> _day2Dialogue;
@@ -98,6 +99,7 @@ public class CaughtFishScene : MonoBehaviour
 		fishInstance.transform.localPosition = Vector3.zero;
 		_cameraFollower.ChangeTarget(_fishInstance.transform);
 		
+		fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
 		director.Play();
 		director.stopped += FinishFling;
 	}
@@ -128,6 +130,7 @@ public class CaughtFishScene : MonoBehaviour
 		teddyAnim.Play("Idle");
 		_cameraFollower.ChangeTarget(hookController.transform);
 		
+		fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
 		GameStateManager.AddCaughtFish(_fishInstance.UniqueName);
 		Destroy(_fishInstance.gameObject);
 		_fishInstance = null;
