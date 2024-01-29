@@ -12,6 +12,8 @@ public class FishRender : MonoBehaviour
     private DialogueBubble m_dialogueBubble;
     [SerializeField]
     private TextMeshProUGUI m_nameTagText;
+    [SerializeField]
+    private Animator m_animator;
 
     public FishInstance FishInstance { get; private set; }
 
@@ -67,5 +69,10 @@ public class FishRender : MonoBehaviour
         m_dialogueBubble.Show(true);
         yield return new WaitForSeconds(4);
         m_dialogueBubble.Show(false);
+    }
+
+    public void SetAnimation(string name)
+    {
+        m_animator.Play(name);
     }
 }
