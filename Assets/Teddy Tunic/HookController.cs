@@ -86,6 +86,12 @@ public class HookController : MonoBehaviour
 
 			case State.AUTOREELING:
 
+				if (_caughtFish == null)
+				{
+					SetState(State.PLAYER_CONTROLLED);
+					return;
+				}
+				
 				Vector3 hookToStart = _startPosition - transform.position;
 
 				// Fish is caught
