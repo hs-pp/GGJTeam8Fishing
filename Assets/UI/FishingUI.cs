@@ -32,10 +32,22 @@ public class FishingUI : MonoBehaviour
 	{
 		if (_isPaused)
 		{
-			pauseUI.gameObject.SetActive(false);
-			pauseUI.alpha = 0f;
-			mainUI.gameObject.SetActive(true);
-			mainUI.alpha = 1f;
+			if(settingsUI.gameObject.activeInHierarchy)
+			{
+                pauseUI.gameObject.SetActive(true);
+                pauseUI.alpha = 1f;
+                settingsUI.gameObject.SetActive(false);
+				settingsUI.alpha = 0f;
+				_isPaused = !_isPaused;
+            } else
+			{
+                pauseUI.gameObject.SetActive(false);
+                pauseUI.alpha = 0f;
+                mainUI.gameObject.SetActive(true);
+                mainUI.alpha = 1f;
+            }
+			
+			
 		}
 		else
 		{

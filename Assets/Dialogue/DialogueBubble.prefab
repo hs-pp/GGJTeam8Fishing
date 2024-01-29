@@ -71,8 +71,8 @@ MonoBehaviour:
     who watery trespass against us; and lead us not into the depths, but deliver
     us from the abyss. Hail Merlin, full of grace.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39f29230536fb6845aebe5ca872cfd02, type: 2}
+  m_sharedMaterial: {fileID: -2927607577413470692, guid: 39f29230536fb6845aebe5ca872cfd02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

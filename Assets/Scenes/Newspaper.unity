@@ -624,6 +624,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3035748322872805536, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035748322872805536, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 39f29230536fb6845aebe5ca872cfd02, type: 2}
+    - target: {fileID: 3035748322872805536, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035748322872805536, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2927607577413470692, guid: 39f29230536fb6845aebe5ca872cfd02, type: 2}
+    - target: {fileID: 3035748322872805536, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3837686883983387795, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -651,6 +671,14 @@ PrefabInstance:
     - target: {fileID: 6376774829700114110, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547709123976915222, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.00048828
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547709123976915222, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00025558
       objectReference: {fileID: 0}
     - target: {fileID: 8399524856184235100, guid: 0eaa49af5c4f3af49bc7515bcff72150, type: 3}
       propertyPath: m_fontSizeBase
