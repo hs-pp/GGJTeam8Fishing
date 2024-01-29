@@ -21,6 +21,9 @@ public class CaughtFishScene : MonoBehaviour
 	[SerializeField] List<AudioSource> fishCaughtSFX;
 
 	[SerializeField]
+	private List<AudioSource> yeetSFX;
+
+	[SerializeField]
 	private List<DialogueItem> _day2Dialogue;
 	[SerializeField]
 	private List<DialogueItem> _day4Dialogue;
@@ -99,7 +102,7 @@ public class CaughtFishScene : MonoBehaviour
 		fishInstance.transform.localPosition = Vector3.zero;
 		_cameraFollower.ChangeTarget(_fishInstance.transform);
 		
-		fishCaughtSFX[UnityEngine.Random.Range(0, fishCaughtSFX.Count)].Play();
+		yeetSFX[GameStateManager.GetBaitAmount()].Play();
 		director.Play();
 		director.stopped += FinishFling;
 	}
