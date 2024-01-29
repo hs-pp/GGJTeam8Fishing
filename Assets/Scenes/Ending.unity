@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 460e9f6e8570d874695bc2eec0c1f367, type: 3}
+      propertyPath: m_text
+      value: Jianna
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 460e9f6e8570d874695bc2eec0c1f367, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -547,6 +551,10 @@ PrefabInstance:
     - target: {fileID: 786331465751215192, guid: 01ea9345b675e2148b00aaa4c0a57207, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 01ea9345b675e2148b00aaa4c0a57207, type: 3}
+      propertyPath: m_text
+      value: Oliver
       objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 01ea9345b675e2148b00aaa4c0a57207, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1532,6 +1540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 0b2f59569c43653419c21dc65103d54e, type: 3}
+      propertyPath: m_text
+      value: Lance
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 0b2f59569c43653419c21dc65103d54e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -1619,6 +1631,10 @@ PrefabInstance:
     - target: {fileID: 786331465751215192, guid: 6749b86ef3550474593f17d0d98d8719, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 6749b86ef3550474593f17d0d98d8719, type: 3}
+      propertyPath: m_text
+      value: Colin
       objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 6749b86ef3550474593f17d0d98d8719, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1831,6 +1847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 2f2d06e6b5833ed4f9e61a310721f91b, type: 3}
+      propertyPath: m_text
+      value: Maximo
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 2f2d06e6b5833ed4f9e61a310721f91b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2036,6 +2056,10 @@ PrefabInstance:
     - target: {fileID: 786331465751215192, guid: 9109091dbe72ac1409d0fd21d97a694c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 9109091dbe72ac1409d0fd21d97a694c, type: 3}
+      propertyPath: m_text
+      value: Ashlynn
       objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 9109091dbe72ac1409d0fd21d97a694c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2298,6 +2322,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 532e00e97394aa94999bfc9446b24090, type: 3}
+      propertyPath: m_text
+      value: 'Norah
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 532e00e97394aa94999bfc9446b24090, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2556,6 +2586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 989fd4f1b5b12e44fbf4ea54e7e2008b, type: 3}
+      propertyPath: m_text
+      value: Xavier
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 989fd4f1b5b12e44fbf4ea54e7e2008b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2721,6 +2755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: b91a53033b144a54db438e20c9854362, type: 3}
+      propertyPath: m_text
+      value: Camden
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: b91a53033b144a54db438e20c9854362, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2860,6 +2898,10 @@ PrefabInstance:
     - target: {fileID: 786331465751215192, guid: 81487f418e31a914ebcfb9811bf1ae61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 81487f418e31a914ebcfb9811bf1ae61, type: 3}
+      propertyPath: m_text
+      value: Aya
       objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 81487f418e31a914ebcfb9811bf1ae61, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3217,6 +3259,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 5eb7a426fb376f544bc765359a3f345b, type: 3}
+      propertyPath: m_text
+      value: Meilani
+      objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 5eb7a426fb376f544bc765359a3f345b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -3330,6 +3376,10 @@ PrefabInstance:
     - target: {fileID: 786331465751215192, guid: 5eb7a426fb376f544bc765359a3f345b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944726455192668305, guid: 5eb7a426fb376f544bc765359a3f345b, type: 3}
+      propertyPath: m_text
+      value: Felix
       objectReference: {fileID: 0}
     - target: {fileID: 8732697819857772243, guid: 5eb7a426fb376f544bc765359a3f345b, type: 3}
       propertyPath: m_SizeDelta.x
